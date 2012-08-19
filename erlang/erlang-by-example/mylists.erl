@@ -18,7 +18,7 @@
 % Hint: use concatenate
 %
 % Chad Gibbons
-% cgibbons@alertlogic.com
+% dcgibbons@gmail.com
 % August 13, 2012
 %
 

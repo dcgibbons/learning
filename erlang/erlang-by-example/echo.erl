@@ -14,7 +14,7 @@
 %   echo:print(Term) ⇒ ok.
 %
 % Chad Gibbons
-% cgibbons@alertlogic.com
+% dcgibbons@gmail.com
 % August 14, 2012
 %
 

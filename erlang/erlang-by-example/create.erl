@@ -8,7 +8,7 @@
 % Example: reverse_create(3) ⇒ [3,2,1].
 %
 % Chad Gibbons
-% cgibbons@alertlogic.com
+% dcgibbons@gmail.com
 % August 10, 2012
 %
 

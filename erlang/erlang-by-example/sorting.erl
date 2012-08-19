@@ -14,7 +14,7 @@
 % sorted separately and their result merged together.
 %
 % Chad Gibbons
-% cgibbons@alertlogic.com
+% dcgibbons@gmail.com
 % August 13, 2012
 %
 
