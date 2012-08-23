@@ -9,7 +9,7 @@
 
 -module(karate_chop).
 -export([chop/2, chop2/2]).
--import(lists, [nth/2]).
+-import(lists, [split/2, nth/2]).
 -include_lib("eunit/include/eunit.hrl").
 
 chop_test() ->
@@ -102,3 +102,47 @@ chop2(Key, List, Lower, Upper) ->
       Mid-1 % lists:nth is 1 based
   end.
 
+
+%
+% Third implementation: array slices with an accumulator! This begs the 
+% question, in Erlang, is splitting a list more efficient than using the 
+% lists:nth() function and passing the same array through recursive calls? And 
+% is either operation clearer? Perhaps to me only, not splitting the array (2nd 
+% implementation) is more clear.
+%
+chop3(Key, List) ->
+    chop3(Key, List, 0).
+chop3(_, [], _) ->
+    -1;
+chop3(Key, List, AccIn) ->
+    Mid = length(List) div 2,
+    {List1, [Item|List2]} = split(Mid, List),
+    if
+        Key < Item ->
+            chop3(Key, List1, AccIn);
+        Key > Item ->
+            chop3(Key, List2, AccIn + Mid + 1);
+        Key =:= Item ->
+            Mid + AccIn
+    end.
+
+chop3_test() ->
+  ?assert(-1 =:= chop3(3, [])),
+  ?assert(-1 =:= chop3(3, [1])),
+  ?assert(0 =:= chop3(1, [1])),
+  ?assert(0 =:= chop3(1, [1, 3, 5])),
+  ?assert(1 =:= chop3(3, [1, 3, 5])),
+  ?assert(2 =:= chop3(5, [1, 3, 5])),
+  ?assert(-1 =:= chop3(0, [1, 3, 5])),
+  ?assert(-1 =:= chop3(2, [1, 3, 5])),
+  ?assert(-1 =:= chop3(4, [1, 3, 5])),
+  ?assert(-1 =:= chop3(6, [1, 3, 5])),
+  ?assert(0 =:= chop3(1, [1, 3, 5, 7])),
+  ?assert(1 =:= chop3(3, [1, 3, 5, 7])),
+  ?assert(2 =:= chop3(5, [1, 3, 5, 7])),
+  ?assert(3 =:= chop3(7, [1, 3, 5, 7])),
+  ?assert(-1 =:= chop3(0, [1, 3, 5, 7])),
+  ?assert(-1 =:= chop3(2, [1, 3, 5, 7])),
+  ?assert(-1 =:= chop3(4, [1, 3, 5, 7])),
+  ?assert(-1 =:= chop3(6, [1, 3, 5, 7])),
+  ?assert(-1 =:= chop3(8, [1, 3, 5, 7])).
