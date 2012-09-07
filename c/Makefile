@@ -1,7 +1,8 @@
 CFLAGS=-g -pendatic -Wall -c99
 
-all: hello
+all: hello fizzbuzz
 clean:
-	-rm a.out *.o hello
+	-rm a.out *.o hello fizzbuzz
 
 hello: hello.c
+fizzbuzz: fizzbuzz.c
