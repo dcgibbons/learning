@@ -1,6 +1,12 @@
 /*
  * exer03.c
  * Exercise 1.3 from Programming Pearls
+ * 
+ * Sort a disk file of 7-digit numbers that are valid telephone numbers.  
+ * Assumptions include that a phone number can only appear in the file once.  
+ * This implementation uses a bit vector to indicate which numbers are present, 
+ * and then dumps the result to the output file, resulting in a very fast 
+ * domain-specific sort.
  *
  * Chad Gibbons
  * September 6, 2012

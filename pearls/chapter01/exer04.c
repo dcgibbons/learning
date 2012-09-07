@@ -1,6 +1,6 @@
 /*
- * gen_numbers.c
- * Programming Pearls, Chapter 1
+ * exer04.c
+ * Exercise 1.4 from Programming Pearls
  *
  * Generates a list of 7-digit numbers that are semantically valid North 
  * America Numbering Plan telephone numbers. Since we don't need an area code 

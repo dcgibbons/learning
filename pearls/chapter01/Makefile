@@ -1,10 +1,9 @@
 CFLAGS=-g -pedantic -Wall -std=c99 
 
-all: gen_numbers exer03 test.dat
+all: exer03 exer04 test.dat
 clean:
-	-rm a.out *.o gen_numbers exer03 *.dat
-
-gen_numbers: gen_numbers.c
+	-rm -r a.out *.o exer03 exer04 *.dat *.dSYM
 exer03: exer03.c
-test.dat: gen_numbers
-	./gen_numbers > test.dat
+exer04: exer04.c
+test.dat: exer04
+	./exer04 > test.dat
