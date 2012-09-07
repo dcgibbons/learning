@@ -21,7 +21,7 @@
 
 #define MAX_VALUE 10000000
 
-int main(int argc, char *argv[])
+int main(void)
 {
     // allocate a bit vector large enough to hold MAX_VALUE. We can't assume 
     // this platform has 8-bits in an unsigned char, so we use the CHAR_BIT 
