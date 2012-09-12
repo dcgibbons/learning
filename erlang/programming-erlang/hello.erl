@@ -7,8 +7,8 @@
 %
 
 -module(hello).
--export([hello/0]).
+-export([start/0]).
 
-hello() ->
+start() ->
   io:format("Hello, World!\n").
 

@@ -40,6 +40,25 @@ def chop2(key, l):
     return chopit(key, l, 0, len(l) - 1)
 
 
+def chop3(key, l):
+  subset = l
+
+  while (len(subset) > 0):
+    upper = len(subset) - 1
+    mid = upper / 2
+    print "mid=%d subset=%r" % (mid, subset)
+    if (key < subset[mid]):
+      subset = subset[:mid]
+      print "key < mid, subset=%r" % subset
+    elif (key > subset[mid]):
+      subset = subset[mid + 1:]
+      print "key > mid, subset=%r" % subset
+    else:
+      return mid
+  else:
+    return -1
+
+
 class TestKarateChop(unittest.TestCase):
     def template(self, fn):
         self.assertEqual(-1, fn(3, []))
@@ -69,6 +88,9 @@ class TestKarateChop(unittest.TestCase):
 
     def test_chop2(self):
         self.template(chop2)
+
+    def test_chop3(self):
+      self.template(chop3)
 
 
 if __name__ == '__main__':
