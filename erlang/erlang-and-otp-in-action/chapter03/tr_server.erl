@@ -1,40 +1,40 @@
-%%%-------------------------------------------------------------------------
-%%% tr_server.erl
+%%%-----------------------------------------------------------------------------
 %%% @author Chad Gibbons <dcgibbons@gmail.com>
-%%% @doc RPC over TCP server. This module defines a server process that
-%%%      listens for incoming TCP connections and allows the user to
-%%%      execute RPC commands via that TCP stream.
+%%% @copyright 2012-2013 Chad Gibbons
+%%% @doc RPC over TCP server. This module defines a server process that listens
+%%%      for incoming TCP connections and allows the user to execute RPC 
+%%%      commands via that TCP stream. Exericse from Chapter 3 of Erlang and
+%%%      OTP in Action.
 %%% @end
-%%%-------------------------------------------------------------------------
+%%%-----------------------------------------------------------------------------
 
 -module(tr_server).
--author('Chad Gibbons <dcgibbons@gmail.com').
--behavior(gen_server).
+-behaviour(gen_server).
 
 %% API
--export([start_link/0, start_link/1]).
+-export([start_link/1, start_link/0, get_count/0, stop/0]).
 
 %% gen_server callbacks
--export([init/1, handle_call/3, handle_cast/2, handle_info/2, terminate/2, code_change/3]).
+-export([init/1, handle_call/3, handle_cast/2, handle_info/2, terminate/2,
+         code_change/3]).
 
 -define(SERVER, ?MODULE).
 -define(DEFAULT_PORT, 1055).
 
 -record(state, {port, lsock, request_count = 0}).
 
-
-%%%=========================================================================
+%%%-----------------------------------------------------------------------------
 %%% API
-%%%=========================================================================
+%%%-----------------------------------------------------------------------------
 
-%%--------------------------------------------------------------------------
+%%------------------------------------------------------------------------------
 %% @doc Starts the server.
 %%
-%% @spec start_link(Port::integer()) -> {ok, Pid}
+%% @spec start_link(Port::integer()) -> ok {ok, Pid}
 %% where
 %%  Pid = pid()
 %% @end
-%%--------------------------------------------------------------------------
+%%------------------------------------------------------------------------------
 start_link(Port) ->
     gen_server:start_link({local, ?SERVER}, ?MODULE, [Port], []).
 
@@ -43,28 +43,29 @@ start_link(Port) ->
 start_link() ->
     start_link(?DEFAULT_PORT).
 
-%%--------------------------------------------------------------------------
+%%------------------------------------------------------------------------------
 %% @doc Fetches the number of requests made to this server.
 %% @spec get_count() -> {ok, Count}
-%% where
+%% where 
 %%  Count = integer()
 %% @end
-%%--------------------------------------------------------------------------
+%%------------------------------------------------------------------------------
 get_count() ->
     gen_server:call(?SERVER, get_count).
 
-%%--------------------------------------------------------------------------
+%%------------------------------------------------------------------------------
 %% @doc Stops the server.
 %% @spec stop() -> ok
 %% @end
-%%--------------------------------------------------------------------------
+%%------------------------------------------------------------------------------
 stop() ->
     gen_server:cast(?SERVER, stop).
 
 
-%%%=========================================================================
+%%%==============================================================================
 %%% gen_server callbacks
-%%%=========================================================================
+%%%==============================================================================
+
 init([Port]) ->
     {ok, LSock} = gen_tcp:listen(Port, [{active, true}]),
     {ok, #state{port = Port, lsock = LSock}, 0}.
@@ -86,12 +87,13 @@ handle_info(timeout, #state{lsock = LSock} = State) ->
 terminate(_Reason, _State) ->
     ok.
 
-code_change(_OldVsn, State, _Extra) ->
+code_change(_OldVsn, State, _EXtra) ->
     {ok, State}.
 
-%%%=========================================================================
+%%%==============================================================================
 %%% Internal Functions
-%%%=========================================================================
+%%%==============================================================================
+
 do_rpc(Socket, RawData) ->
     try
         {M, F, A} = split_out_mfa(RawData),
@@ -104,12 +106,12 @@ do_rpc(Socket, RawData) ->
 
 split_out_mfa(RawData) ->
     MFA = re:replace(RawData, "\r\n$", "", [{return, list}]),
-    {match, [M, F, A]} = re:run(MFA, "(.*):(.*)\s*\\((.*)\s*\\)\s*.\s*$",
-        [{capture, [1,2,3], list}, ungreedy]),
+    {match, [M, F, A]} =
+        re:run(MFA, "(.*):(.*)\s*\\((.*)\s*\\)\s*.\s*$",
+            [{capture, [1,2,3], list}, ungreedy]),
     {list_to_atom(M), list_to_atom(F), args_to_terms(A)}.
 
 args_to_terms(RawArgs) ->
     {ok, Toks, _Line} = erl_scan:string("[" ++ RawArgs ++ "]. ", 1),
     {ok, Args} = erl_parse:parse_term(Toks),
     Args.
-
