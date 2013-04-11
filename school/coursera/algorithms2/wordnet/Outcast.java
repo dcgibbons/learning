@@ -7,9 +7,6 @@
  * Student:     David Chadwick Gibbons <dcgibbons@gmail.com>
  */
 
-import java.util.Map;
-import java.util.HashMap;
-
 public class Outcast
 {
     private WordNet wordnet;
@@ -25,38 +22,23 @@ public class Outcast
     {
         String currentOutcast = null;
         int currentOutcastDistance = -1;
-        Map<String, Integer> cache = new HashMap<String, Integer>();
 
         for (String nounA : nouns)
         {
+            int dT = 0;
+
             for (String nounB : nouns)
             {
                 if (nounA.equals(nounB)) continue;
-                String a = null;
-                String b = null;
-                int n = nounA.compareTo(nounB);
-                if (n == 0) continue;
-                else if (n < 0)
-                {
-                    a = nounA;
-                    b = nounB;
-                }
-                else
-                {
-                    a = nounB;
-                    b = nounA;
-                }
+                int d = wordnet.distance(nounA, nounB);
+                if (d == -1) continue;
+                dT += d;
+            }
 
-                String key = a + "," + b;
-                if (cache.containsKey(key)) continue;
-
-                int d = wordnet.distance(a, b);
-                cache.put(key, d);
-                if (d != -1 && d > currentOutcastDistance)
-                {
-                    currentOutcast = nounB;
-                    currentOutcastDistance = d;
-                }
+            if (dT > currentOutcastDistance)
+            {
+                currentOutcast = nounA;
+                currentOutcastDistance = dT;
             }
         }
 

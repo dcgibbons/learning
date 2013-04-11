@@ -1,114 +1,162 @@
-import java.util.*;
-import java.lang.reflect.Array;
+/*
+ * File:        SAP.java
+ * Assignment:  WordNet
+ * Course:      Algorithms II
+ * School:      Princeton University via coursera.com
+ * Instructors: Robert Sedgewick and Kevin Wayne
+ * Student:     David Chadwick Gibbons <dcgibbons@gmail.com>
+ */
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SAP
 {
-	Digraph G;
+    private Digraph G;
+    private Map<String, Map<Integer, Integer>> cache;
 
-	// constructor takes a digraph (not necessarily a Digraph)
-	public SAP(Digraph G)
-	{
-		this.G = new Digraph(G);
-	}
+    // constructor takes a digraph (not necessarily a Digraph)
+    public SAP(Digraph G)
+    {
+        this.G = new Digraph(G);
+        cache = new HashMap<String, Map<Integer, Integer>>();
+    }
 
-	// length of shortest ancestral path between v and w; -1 if no such path
-	public int length(int v, int w)
-	{
-		ArrayList<Integer> a = new ArrayList<Integer>(1);
-		a.add(v);
-		ArrayList<Integer> b = new ArrayList<Integer>(1);
-		b.add(w);
-		return length(a, b);
-	}
+    // length of shortest ancestral path between v and w; -1 if no such path
+    public int length(int v, int w)
+    {
+        ArrayList<Integer> a = new ArrayList<Integer>(1);
+        a.add(v);
+        ArrayList<Integer> b = new ArrayList<Integer>(1);
+        b.add(w);
+        return length(a, b);
+    }
 
-	// a common ancestor of v and w that participates in a shortest ancestral path; -1 if no such path
-	public int ancestor(int v, int w)
-	{
-		ArrayList<Integer> a = new ArrayList<Integer>(1);
-		a.add(v);
-		ArrayList<Integer> b = new ArrayList<Integer>(1);
-		b.add(w);
-		return ancestor(a, b);
-	}
+    // a common ancestor of v and w that participates in a shortest ancestral 
+    // path; -1 if no such path
+    public int ancestor(int v, int w)
+    {
+        ArrayList<Integer> a = new ArrayList<Integer>(1);
+        a.add(v);
+        ArrayList<Integer> b = new ArrayList<Integer>(1);
+        b.add(w);
+        return ancestor(a, b);
+    }
 
-	// length of shortest ancestral path between any vertex in v and any vertex in w; -1 if no such path
-	public int length(Iterable<Integer> v, Iterable<Integer> w)
-	{
-		int shortestAncestor = -1;
-		int shortestAncestorLength = Integer.MAX_VALUE;
+    // length of shortest ancestral path between any vertex in v and any vertex
+    // in w; -1 if no such path
+    public int length(Iterable<Integer> v, Iterable<Integer> w)
+    {
+        int shortestAncestor = -1;
+        int shortestAncestorLength = Integer.MAX_VALUE;
 
-		for (int i = 0; i < this.G.V(); i++)
-		{
-			BreadthFirstDirectedPaths A = new BreadthFirstDirectedPaths(this.G, v);
-			BreadthFirstDirectedPaths B = new BreadthFirstDirectedPaths(this.G, w);
+        for (int i = 0; i < this.G.V(); i++)
+        {
+            int vLength = cacheLookup(v, i);
+            if (vLength == -1) continue;
 
-			if (A.hasPathTo(i) && B.hasPathTo(i))
-			{
-				int length = count(A.pathTo(i)) + count(B.pathTo(i));
-				if (length < shortestAncestorLength) 
-				{
-					shortestAncestor = i;
-					shortestAncestorLength = length;
-				}
-			}
-		}
+            int wLength = cacheLookup(w, i);
+            if (wLength == -1) continue;
 
-		return (shortestAncestorLength != Integer.MAX_VALUE) ? shortestAncestorLength : -1;
-	}
+            int length = vLength + wLength;
+            if (length < shortestAncestorLength) 
+            {
+                shortestAncestor = i;
+                shortestAncestorLength = length;
+            }
+        }
 
-	// a common ancestor that participates in shortest ancestral path; -1 if no such path
-	public int ancestor(Iterable<Integer> v, Iterable<Integer> w)
-	{
-		int shortestAncestor = -1;
-		int shortestAncestorLength = Integer.MAX_VALUE;
+        if (shortestAncestorLength != Integer.MAX_VALUE) 
+            return shortestAncestorLength;
+        else
+            return -1;
+    }
 
-		for (int i = 0; i < this.G.V(); i++)
-		{
-			BreadthFirstDirectedPaths A = new BreadthFirstDirectedPaths(this.G, v);
-			BreadthFirstDirectedPaths B = new BreadthFirstDirectedPaths(this.G, w);
+    // a common ancestor that participates in shortest ancestral path;
+    // -1 if no such path
+    public int ancestor(Iterable<Integer> v, Iterable<Integer> w)
+    {
+        int shortestAncestor = -1;
+        int shortestAncestorLength = Integer.MAX_VALUE;
 
-			if (A.hasPathTo(i) && B.hasPathTo(i))
-			{
-				int length = count(A.pathTo(i)) + count(B.pathTo(i));
-				if (length < shortestAncestorLength) 
-				{
-					shortestAncestor = i;
-					shortestAncestorLength = length;
-				}
-			}
-		}
+        for (int i = 0; i < this.G.V(); i++)
+        {
+            int vLength = cacheLookup(v, i);
+            if (vLength == -1) continue;
 
-		return shortestAncestor;
-	}
+            int wLength = cacheLookup(w, i);
+            if (wLength == -1) continue;
 
-	private static int count(Iterable<Integer> it)
-	{
-		int n = 0;
-		for (Integer x : it) n++;
-		return n - 1; // -1 to remove start of path, which is our vertex
-	}
+            int length = vLength + wLength;
+            if (length < shortestAncestorLength) 
+            {
+                shortestAncestor = i;
+                shortestAncestorLength = length;
+            }
+        }
 
-	public static Integer[] toArray(Iterable<Integer> it)
-	{
-		ArrayList<Integer> a = new ArrayList<Integer>();
-		for (Integer i : it) a.add(i);
-		return a.toArray(new Integer[0]);
-	}
+        return shortestAncestor;
+    }
 
-	// for unit testing of this class (such as the one below)
-	public static void main(String[] args) 
-	{
-	    In in = new In(args[0]);
-	    Digraph G = new Digraph(in);
-	    System.out.println("Digraph loaded:\n"+G);
-	    SAP sap = new SAP(G);
-	    while (!StdIn.isEmpty()) 
-	    {
-	        int v = StdIn.readInt();
-	        int w = StdIn.readInt();
-	        int length   = sap.length(v, w);
-	        int ancestor = sap.ancestor(v, w);
-	        StdOut.printf("length = %d, ancestor = %d\n", length, ancestor);
-    	}
+    private int cacheLookup(Iterable<Integer> v, int dest)
+    {
+        String vs = stringify(v);
+
+        Map<Integer, Integer> m = null;
+        if (cache.containsKey(vs))
+        {
+            m = cache.get(vs);
+            if (m.containsKey(dest))
+            {
+                return m.get(dest);
+            }
+        }
+        else
+        {
+            m = new HashMap<Integer, Integer>();
+            cache.put(vs, m);
+        }
+
+        DeluxeBFS A = new DeluxeBFS(this.G, v);
+        int n = -1;
+        if (A.hasPathTo(dest))
+        {
+            n = count(A.pathTo(dest));
+        }
+        m.put(dest, n);
+        return n;
+
+    }
+
+    private static String stringify(Iterable<Integer> it)
+    {
+        StringBuilder buffer = new StringBuilder();
+        for (int x : it) buffer.append(x).append(",");
+        return buffer.toString();
+    }
+
+    private static int count(Iterable<Integer> it)
+    {
+        int n = 0;
+        for (int x : it) n++;
+        return n - 1; // -1 to remove start of path, which is our vertex
+    }
+
+    // for unit testing of this class (such as the one below)
+    public static void main(String[] args) 
+    {
+        In in = new In(args[0]);
+        Digraph G = new Digraph(in);
+        System.out.println("Digraph loaded:\n"+G);
+        SAP sap = new SAP(G);
+        while (!StdIn.isEmpty()) 
+        {
+            int v = StdIn.readInt();
+            int w = StdIn.readInt();
+            int length   = sap.length(v, w);
+            int ancestor = sap.ancestor(v, w);
+            StdOut.printf("length = %d, ancestor = %d\n", length, ancestor);
+        }
     }
 }
