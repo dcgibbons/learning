@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="Name" type="xsd:string"/>
+  <xsd:element name="ID" type="xsd:string"/>
+  <xsd:element name="DOB" type="xsd:date"/>
+  <xsd:element name="Age" type="xsd:positiveInteger"/>
+  <xsd:element name="Stage" type="xsd:string"/>
+  <xsd:element name="Comment" type="xsd:string"/>
+
+  <xsd:element name="Performance">
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="xsd:decimal">
+          <xsd:attribute name="Scale" type="xsd:string" use="required"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="Patient">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Name"/>
+        <xsd:element ref="ID"/>
+        <xsd:element ref="DOB"/>
+        <xsd:element ref="Age"/>
+        <xsd:element ref="Stage"/>
+        <xsd:element ref="Comment" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="Performance"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="Patients">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Patient" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

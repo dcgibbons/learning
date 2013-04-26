@@ -1,0 +1,146 @@
+/* CSS Document */
+
+body {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 1.6em;
+	background-color: #AFB9C2;
+}
+
+#master {
+	width: 756px;
+	margin: 0 auto 0 auto;
+}
+
+#header {
+	width: 698px;
+	height: 158px;
+	background-color: #000;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	background-image: url("w7574d.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#topnav {
+	fonmt-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 10px;
+	width: 698px;
+	background-color: #000;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	text-align: center;
+}
+
+#topnav ul {
+	padding: 5px 0 5px 0;
+	margin: 0 auto 0 auto;
+}
+
+#topnav li {
+	list-style-type: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+#topnav a:link, #topnav a:visited {
+	line-height: 14px;
+	margin: 0 10px 4px 10px;
+	text-decoration: none;
+	color: #CCC;
+	padding-bottom: 5px;
+}
+
+#topnav a.indicator:link, #topnav a.indicator:visited {
+	border-bottom: 4px solid #FFF;
+	padding-bottom: 5px;
+	color: #FFF;
+}
+
+#topnav a:hover {
+	color: #FFF;
+}
+
+#content {
+	width: 678px;
+	padding: 10px;
+	margin: 0 auto 0 auto;
+	text-align: left;
+	background-color: #FFF;
+}
+
+#content h1, h2, h3, h4, h5 {
+	text-align: center;
+}
+
+#content h1 {
+	font-size: 18px;
+}
+
+#content h2 {
+	text-transform: lowercase;
+	font-style: italic;
+	font-size: 14px;
+}
+
+#content p {
+	padding: 10px;
+}
+
+#contactinfo {
+	margin: 2em auto 2em auto;
+}
+
+#contactinfo h2 {
+	font-size: 12px;
+	border-bottom: solid #AFB9C2;
+	border-bottom-width: 1px;
+	padding: 0 auto 0 auto;
+	margin: 0 auto 0 auto;
+}
+
+#contactinfo address {
+	text-align: center;
+	margin: 0 auto 2em auto;
+}
+
+#products {
+	list-style: none;
+}
+
+.productItem {
+	clear: both;
+	margin: 10px 10px 10px 10px;
+	border-bottom: solid #FFF;
+	border-bottom-width: 1px;
+	padding-top: 5em;
+	padding-bottom: 5em;
+}
+
+.productImage {
+	float: right;
+	padding: 5px;
+	border: solid black;
+	border-width: 1px;
+}
+
+img.inlineImage {
+	float: right;
+	border: solid black;
+	border-width: 1px;
+	padding: 5px;
+	margin: 5px;
+}
+
+#cartMenu {
+	text-align: center;
+}
+

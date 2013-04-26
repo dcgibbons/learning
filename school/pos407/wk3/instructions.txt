@@ -1,0 +1,22 @@
+Modify the mortgage applet to be an application and to allow the user to input
+the amount of a mortgage and then select from a menu of mortgage loans: 7 year
+at 5.35%, 15 year at 5.50%, and 30 year at 5.75%.  Use an array for the
+different loans.  Display the mortgage payment amount.  Then, list the loan
+balance, amount of principle, and interest paid for each payment over the term
+of the loan.  Allow the user to loop back and enter a new amount and make a new
+selection, with resulting new values. Allow user to exit if running as an
+application (can't do that for an applet though).
+
+Note: I do not particularly care if the calculations are accurate from any
+banking view. I am looking to see that you understand the Java programming
+concepts discussed up to this point. Specifically, show me that you can create
+a loop that will fill an area with a series of different (calculated) values.
+Show me that you can create a reasonable GUI that allows me to choose from a
+menu, input text, and see a series of up to 360 different results.
+
+Note 2: I recommend that you not try to use JTable for the presentation of the
+results.  That is a very complex Class that took me a month to get right the
+first time (when I was teaching myself Java out of a textbook).  It still
+gives me fits each time I set one up.  Choose some other Class for
+presentation. (I certainly won't dock anyone that gets a JTable to work, but
+that is far more complex approach than I expect anyone here to master.)

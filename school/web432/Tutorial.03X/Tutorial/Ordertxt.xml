@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+
+<Customers>
+   <Customer CustID="Cust201" CustType="home">
+      <Name Title="Mr.">David Lynn</Name>
+      <Address>
+         <![CDATA[
+         211 Fox Street
+         Greenville, NH 80021
+         ]]>
+      </Address>
+      <Phone>(315) 555-1812</Phone>
+      <E-mail>dlynn@nhs.net</E-mail>
+      <Orders>
+         <Order OrderID="OR10311" OrderBy="Cust201">
+            <Order_date>8/1/2004</Order_date>
+            <Items>
+               <Item ItemPrice="599.95">DCT3Z</Item>
+               <Item ItemPrice="199.95">SM128</Item>
+               <Item ItemPrice="29.95" ItemQty="2">RCL</Item>
+            </Items>
+         </Order>
+         <Order OrderID="OR11424" OrderBy="Cust201">
+            <Order_date>9/14/2004</Order_date>
+            <Items>
+               <Item ItemPrice="59.95">BCE4L</Item>
+            </Items>
+         </Order>
+      </Orders>
+   </Customer>
+
+   <Customer CustID="Cust202">
+      <Name Title="Mrs.">Jean Kaufmann</Name>
+      <Address>
+         <![CDATA[
+         411 East Oak Avenue
+         Cashton, MI  20401
+         ]]>
+      </Address>
+      <Phone>(611) 555-4033</Phone>
+      <E-mail>JKaufmann@cshweb.com</E-mail>
+      <Orders>
+         <Order OrderID="OR10899" OrderBy="Cust202">
+            <Order_date>8/11/2004</Order_date>
+            <Items>
+               <Item ItemPrice="59.99">WBC500</Item>
+               <Item ItemPrice="5.95" ItemQty="2">RCA</Item>
+            </Items>
+         </Order>
+      </Orders>
+   </Customer>
+
+   <Customer CustID="Cust203" CustType="business">
+      <Name>AdServices</Name>
+      <Address>
+         <![CDATA[
+         55 Washburn Lane
+         Creighton, UT  98712
+         ]]>
+      </Address>
+      <Phone>(811) 555-2987</Phone>
+      <Orders>
+         <Order OrderID="OR11201" OrderBy="Cust203">
+            <Order_date>9/15/2004</Order_date>
+            <Items>
+               <Item ItemPrice="179.99" ItemQty="3">SCL4C</Item>
+            </Items>
+         </Order>
+      </Orders>
+   </Customer>
+</Customers>

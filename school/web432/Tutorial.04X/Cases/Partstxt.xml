@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!-- Parts Used to Make GrillRite Grills -->
+
+<Parts>
+   <Part>
+      <Name>Main Burner</Name>
+      <Cost>$12.15</Cost>
+      <InStock>1411</InStock>
+   </Part>
+   <Part>
+      <Name>Side Burner</Name>
+      <Cost>$8.25</Cost>
+      <InStock>957</InStock>
+   </Part>
+   <Part>
+      <Name>Standard Chassis</Name>
+      <Cost>$35.50</Cost>
+      <InStock>877</InStock>
+   </Part>
+   <Part>
+      <Name>Extended Chassis</Name>
+      <Cost>$65.25</Cost>
+      <InStock>781</InStock>
+   </Part>
+   <Part>
+      <Name>Controls</Name>
+      <Cost>$2.50</Cost>
+      <InStock>2671</InStock>
+   </Part>
+   <Part>
+      <Name>Gas Tubing</Name>
+      <Cost>$3.50</Cost>
+      <InStock>2321</InStock>
+   </Part>
+   <Part>
+      <Name>Igniter</Name>
+      <Cost>$2.25</Cost>
+      <InStock>2217</InStock>
+   </Part>
+   <Part>
+      <Name>Main Rack</Name>
+      <Cost>$10.30</Cost>
+      <InStock>1417</InStock>
+   </Part>
+   <Part>
+      <Name>Side Rack</Name>
+      <Cost>$6.30</Cost>
+      <InStock>723</InStock>
+   </Part>
+   <Part>
+      <Name>Stand</Name>
+      <Cost>$25.10</Cost>
+      <InStock>1388</InStock>
+   </Part>
+</Parts>

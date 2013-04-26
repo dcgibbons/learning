@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Riordan Manufacturing Supply Chain
+  Learning Team A Final Project
+  Janet Carlin, David C. Gibbons
+  WEB/432 - Web Programming III
+  Ganesh Shan
+  January 8, 2007
+  -->
+<!DOCTYPE supplychain SYSTEM "supplychain.dtd">
+<supplychain timestamp="2006/12/27 14:28">
+  <order orderId="pp00037">
+    <requester>Riordan Manufacturing</requester>
+    <vendor>Brooks Chemical Supply</vendor>
+    <product productCode="polypel100">Polymer Pellets</product>
+    <quantity>100000</quantity>
+  </order>
+</supplychain>

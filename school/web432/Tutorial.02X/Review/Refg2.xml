@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+
+<Inventory>
+   <Type>
+      <MType>Cabinet</MType>
+      <Model>
+         <Name>FPC2000</Name>
+         <Price>$1499</Price>
+         <Capacity>20.7</Capacity>
+         <Dimensions>67 1/2" x 35 3/4" x 26 1/4"</Dimensions>
+         <Energy>Yes</Energy>
+         <Freezer>Side-by-Side</Freezer>
+         <Photo>FPC2000.jpg</Photo>
+     </Model>
+     <Model>
+         <Name>FPC2020</Name>
+         <Price>$1599</Price>
+         <Capacity>20.9</Capacity>
+         <Dimensions>67 1/2" x 35 3/4" x 26 5/8"</Dimensions>
+         <Energy>Yes</Energy>
+         <Freezer>Side-by-Side</Freezer>
+         <Photo>FPC2020.jpg</Photo>
+     </Model>
+     <Model>
+         <Name>FPC2050</Name>
+         <Price>$1799</Price>
+         <Capacity>21.1</Capacity>
+         <Dimensions>67 1/2" x 35 3/4" x 26 5/8"</Dimensions>
+         <Energy>Yes</Energy>
+         <Freezer>Side-by-Side</Freezer>
+         <Photo>FPC2050.jpg</Photo>
+     </Model>
+     <Model>
+         <Name>FPC1000</Name>
+         <Price>$599</Price>
+         <Capacity>18.2</Capacity>
+         <Dimensions>68 5/8" x 29 5/8" x 29 7/8"</Dimensions>        
+         <Energy>No</Energy>
+         <Freezer>Top</Freezer>
+         <Photo>FPC1000.jpg</Photo>
+     </Model>
+     <Model>
+         <Name>FPC1020</Name>
+         <Price>$679</Price>
+         <Capacity>20.6</Capacity>
+         <Dimensions>68 3/16" x 29 5/8" x 31 3/4"</Dimensions>
+         <Energy>No</Energy>
+         <Freezer>Top</Freezer>
+         <Photo>FPC1020.jpg</Photo>
+     </Model>
+     <Model>
+         <Name>FPC1050</Name>
+         <Price>$799</Price>
+         <Capacity>21.0</Capacity>
+         <Dimensions>68 3/8" x 29 5/8" x 29 7/8"</Dimensions>         
+         <Energy>Yes</Energy>
+         <Freezer>Top</Freezer>
+         <Photo>FPC1050.jpg</Photo>
+     </Model>
+   </Type>
+   <Type>
+      <MType>Freestanding</MType>       
+      <Model>
+         <Name>FPC3000</Name>
+         <Price>$1029</Price>
+         <Capacity>23.7</Capacity>
+         <Dimensions>68 5/8" x 35 5/8" x 29"</Dimensions>         
+         <Energy>No</Energy>
+         <Freezer>Side-by-Side</Freezer>
+         <Photo>FPC3000.jpg</Photo>
+     </Model>
+     <Model>
+         <Name>FPC3050</Name>
+         <Price>$1199</Price>
+         <Capacity>25.8</Capacity>
+         <Dimensions>68 5/8" x 35 5/8" x 30 3/4"</Dimensions>         
+         <Energy>No</Energy>
+         <Freezer>Side-by-Side</Freezer>
+         <Photo>FPC3050.jpg</Photo>
+     </Model>
+     <Model>
+         <Name>FPC3070</Name>
+         <Price>$1399</Price>
+         <Capacity>25.8</Capacity>
+         <Dimensions>68 5/8" x 35 5/8" x 30 3/4"</Dimensions>         
+         <Energy>Yes</Energy>
+         <Freezer>Side-by-Side</Freezer>
+         <Photo>FPC3070.jpg</Photo>
+     </Model>
+     <Model>
+         <Name>FPC3090</Name>
+         <Price>$1799</Price>
+         <Capacity>26.2</Capacity>
+         <Dimensions>68 5/8" x 35 5/8" x 33 3/8"</Dimensions>         
+         <Energy>No</Energy>
+         <Freezer>Side-by-Side</Freezer>
+         <Photo>FPC3090.jpg</Photo>
+     </Model>
+     <Model>
+         <Name>FPC1070</Name>
+         <Price>$899</Price>
+         <Capacity>21.2</Capacity>
+         <Dimensions>68 3/16" x 29 5/8" x 31 3/4"</Dimensions>         
+         <Energy>No</Energy>
+         <Freezer>Top</Freezer>
+         <Photo>FPC1070.jpg</Photo>
+     </Model>
+     <Model>
+         <Name>FPC1090</Name>
+         <Price>$999</Price>
+         <Capacity>21.6</Capacity>
+         <Dimensions>68 3/16" x 29 5/8" x 31 3/4"</Dimensions>         
+         <Energy>Yes</Energy>
+         <Freezer>Top</Freezer>
+         <Photo>FPC1090.jpg</Photo>
+     </Model>
+   </Type>
+</Inventory>

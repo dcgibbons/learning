@@ -1,0 +1,297 @@
+/*
+ * styles.css
+ * Stylesheet for Week 3 Programming Assignment
+ * David C. Gibbons
+ * WEB/410 - Web Programming I
+ * Dr. Kimberly Blum
+ * October 2, 2006
+ */
+
+body {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.6em;
+  background-color: #646e57; /* a nice green */
+}
+
+/*
+ * our content is in a fixed sized div that we want centered in the screen
+ */
+#master {
+  width: 756px;
+  margin: 0 auto 0 auto;
+}
+
+/*
+ * links in the content area need some decoration
+ */
+#content a:link {
+	color: #6A0A0A;
+	font-weight: bold;
+	text-decoration:none;
+	border-bottom: 1px dotted #6A0A0A;
+}
+
+/*
+ * change the color of the links when hovering
+ */
+#content a:hover {
+	border-bottom: 1px solid #6A0A0A;
+}
+
+/*
+ * after we've visited the link, add a checkmark
+ * and change the color so we can tell!
+ */
+#content a:visited:after {
+	color: #828282;
+	font-weight: normal;
+	content: "\00A0\221A";
+	font-size: 75%;
+}
+
+/*
+ * fix IE
+ */
+#content a.nocheck:visited:after {
+	content: "";
+}
+
+#content a:visited {
+	font-size: 100%;
+	font-weight: bold;
+	color: #828282;
+	text-decoration:none;
+	border-bottom: 1px dotted #828282;
+}
+
+#content a:visited:hover {
+	border-bottom: 1px solid #828282;
+}
+
+/*
+ * our content header is a small region that contains a header
+ * background image to set off the whole page
+ */
+#header {
+  width: 698px;
+  height: 158px;
+  background-color: #000;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  background-image: url("macworld2006-keynote.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*
+ * our topnav div is a menu navigation area where we
+ * dramatically change the appearance of the links
+ */
+#topnav {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 10px;
+	width: 698px;
+	background-color: #000;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	text-align: center;
+}
+
+#topnav ul {
+  padding: 5px 0 5px 0;
+  margin: 0 auto 0 auto;
+}
+
+/*
+ * display the link list inlined without any decoration
+ */
+#topnav li {
+  list-style-type: none;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+#topnav a:link, #topnav a:visited {
+  line-height: 14px;
+  margin: 0 10px 4px 10px;
+  text-decoration: none;
+  color: #CCC;
+  padding-bottom: 5px;
+}
+
+/*
+ * a link with the visited class will be underlined so the
+ * user can tell that's the page they are currently on
+ */
+#topnav a.indicator:link, #topnav a.indicator:visited {
+  border-bottom: 4px solid #FFF;
+  padding-bottom: 5px;
+  color: #FFF;
+}
+
+#topnav a:hover {
+  color: #FFF;
+}
+
+/*
+ * for the resume navigation area we want to show so
+ * links to the different parts of the resume
+ */
+#resumesav {
+    text-align: center;
+}
+
+#resumenav ul {
+    padding: 5px 0 5px 0;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    font-size: smaller;
+}
+
+/*
+ * same story here - don't make it look like a list, but
+ * give it some more space between elements
+ */
+#resumenav li {
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    padding: 5px;
+
+}
+
+/*
+ * the main content div is where all of our actual content
+ * goes (imagine that!)
+ */
+#content {
+  width: 678px;
+  padding: 10px;
+  margin: 0 auto 0 auto;
+  text-align: left;
+  background-color: #FFF;
+}
+
+#content h2 {
+    text-transform: lowercase;
+}
+
+#footer {
+  text-align: center;
+  width: 698px;
+  margin-top: 1em; 
+}
+
+#footer img {
+    border: 0;
+    margin: 0;
+    padding: 1em;
+}
+
+#resumeheader h1 {
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 18pt;
+}
+
+#resumeheader address {
+    text-align: center;
+    text-transform: lowercase;
+    font-size: 10px;
+}
+
+.company {
+    font-weight: bold;
+}
+
+.jobdate {
+    float: right;
+    font-style: italic;
+    width: 100px;
+}
+
+.institution {
+    font-weight: bold;
+}
+
+#about h1 {
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 18pt;
+}
+
+#about {
+    float: none;
+    height: 250px;
+}
+
+#about img {
+    margin: 0.5em;
+    padding: 0.25em;
+    border-style: solid;
+    border-color: #000;
+}
+
+#products table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#products caption {
+    text-align: center;
+    font-weight: bold;
+    text-transform: lowercase;
+    font-size: 18pt;
+    padding-bottom: 1em;
+}
+
+#products th {
+    vertical-align: baseline;
+    text-align: center;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+#products td {
+    padding: 0.5em;
+    vertical-align: baseline;
+}
+
+/*
+ * clear the float on every row
+ */
+#products tr {
+    clear: both;
+}
+
+/*
+ * any of the images in the products section we want floating
+ * off to the right of the text
+ */
+#products img {
+    float: right;
+}
+
+/*
+ * make the credits div not so conspicuous
+ */
+#credits {
+    font-size: smaller;
+    font-style: italic;
+    text-align: center;
+}
+
+/*
+ * make sure our numeric columns are right aligned
+ */
+td.numeric {
+    text-align: right;
+}

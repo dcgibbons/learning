@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!-- Grills Sold by GrillRite -->
+
+<Grills>
+   <Model>
+      <Name>Standard</Name>
+      <Price>$96.50</Price>
+      <InStock>302</InStock>
+      <Parts>
+         <Part Qty="1">Main Burner</Part>
+         <Part Qty="1">Standard Chassis</Part>
+         <Part Qty="1">Controls</Part>
+         <Part Qty="1">Gas Tubing</Part>
+         <Part Qty="1">Igniter</Part>
+         <Part Qty="1">Main Rack</Part>
+         <Part Qty="1">Stand</Part>
+      </Parts>
+   </Model>
+   <Model>
+      <Name>Deluxe</Name>
+      <Price>$105.15</Price>
+      <InStock>299</InStock>
+      <Parts>
+         <Part Qty="1">Main Burner</Part>
+         <Part Qty="1">Standard Chassis</Part>
+         <Part Qty="2">Controls</Part>
+         <Part Qty="1">Gas Tubing</Part>
+         <Part Qty="1">Igniter</Part>
+         <Part Qty="1">Main Rack</Part>
+         <Part Qty="1">Top Rack</Part>
+         <Part Qty="1">Stand</Part>
+      </Parts>
+   </Model>
+   <Model>
+      <Name>Dual</Name>
+      <Price>$155.20</Price>
+      <InStock>100</InStock>
+      <Parts>
+         <Part Qty="1">Main Burner</Part>
+         <Part Qty="1">Side Burner</Part>
+         <Part Qty="1">Extended Chassis</Part>
+         <Part Qty="2">Controls</Part>
+         <Part Qty="2">Gas Tubing</Part>
+         <Part Qty="2">Igniter</Part>
+         <Part Qty="1">Main Rack</Part>
+         <Part Qty="1">Side Rack</Part>
+         <Part Qty="2">Top Rack</Part>
+         <Part Qty="1">Stand</Part>
+      </Parts>
+   </Model>
+   <Model>
+      <Name>Extended</Name>
+      <Price>$178.00</Price>
+      <InStock>311</InStock>
+      <Parts>
+         <Part Qty="1">Main Burner</Part>
+         <Part Qty="2">Side Burner</Part>
+         <Part Qty="1">Extended Chassis</Part>
+         <Part Qty="3">Controls</Part>
+         <Part Qty="3">Gas Tubing</Part>
+         <Part Qty="3">Igniter</Part>
+         <Part Qty="1">Main Rack</Part>
+         <Part Qty="2">Side Rack</Part>
+         <Part Qty="2">Top Rack</Part>
+         <Part Qty="1">Stand</Part>
+      </Parts>
+   </Model>
+</Grills>

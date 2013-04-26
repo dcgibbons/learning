@@ -1,0 +1,6 @@
+#
+# mortgageterm, interestrate
+#
+7,5.35
+15,5.50
+30,5.75

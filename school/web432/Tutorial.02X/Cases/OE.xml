@@ -1,0 +1,394 @@
+<?xml version="1.0"?>
+
+<Inventory>
+   <Group>
+     <Group_Name>CD Player/Receiver ($0-$200)</Group_Name>
+     <Product>
+       <PID>ADX317</PID>
+       <Manufacturer>Addison</Manufacturer>
+       <Name>Addison Detachable Face CD 180 Watts Max</Name>
+       <Price>119.99</Price>
+     </Product>
+     <Product>
+       <PID>ADX417</PID>
+       <Manufacturer>Addison</Manufacturer>
+       <Name>Addison Detachable Face CD Player 160 Watts Max with Steering Wheel Remote</Name>
+       <Price>128.99</Price>
+     </Product>
+     <Product>
+       <PID>ADX517</PID>
+       <Manufacturer>Addison</Manufacturer>
+       <Name>Addison Detachable Face CD Player 200 Watts Max with Steering Wheel Remote</Name>
+       <Price>159.99</Price>
+     </Product>
+     <Product>
+       <PID>ADCMP3</PID>
+       <Manufacturer>Addison</Manufacturer>
+       <Name>Addison Magic Flip Face CD Player 200 Watts Max with Steering Wheel Remote</Name>
+       <Price>199.99</Price>
+     </Product>
+     <Product>
+       <PID>CLK216</PID>
+       <Manufacturer>Clarkson</Manufacturer>
+       <Name>Clarkson 180 Watts Max CD Player</Name>
+       <Price>109.99</Price>
+     </Product>
+     <Product>
+       <PID>CLK317</PID>
+       <Manufacturer>Clarkson</Manufacturer>
+       <Name>Clarkson 180 Watts Max CD Player</Name>
+       <Price>149.99</Price>
+     </Product>
+     <Product>
+       <PID>LX715K</PID>
+       <Manufacturer>Linax</Manufacturer>
+       <Name>Linax Fixed DIN CD Player with Wireless Remote</Name>
+       <Price>99.99</Price>
+     </Product>
+     <Product>
+       <PID>LX4001</PID>
+       <Manufacturer>Linax</Manufacturer>
+       <Name>Linax AM/FM/CD 100 Watt Receiver with Detachable Face</Name>
+       <Price>109.99</Price>
+     </Product>
+     <Product>
+       <PID>LX720K</PID>
+       <Manufacturer>Linax</Manufacturer>
+       <Name>Linax Flip Down Detachable Face CD Player with Wireless Remote</Name>
+       <Price>139.99</Price>
+     </Product>
+     <Product>
+       <PID>KWDS570</PID>
+       <Manufacturer>KWD</Manufacturer>
+       <Name>KWD AM/FM/CD Receiver with Detachable Face</Name>
+       <Price>124.99</Price>
+     </Product>
+     <Product>
+       <PID>KWDSX770</PID>
+       <Manufacturer>KWD</Manufacturer>
+       <Name>KWD 180 Watts Max CD Player</Name>
+       <Price>139.99</Price>
+     </Product>
+     <Product>
+       <PID>KWDS670</PID>
+       <Manufacturer>KWD</Manufacturer>
+       <Name>KWD High Performance CD Receiver with AM/FM/CD and Detachable Face</Name>
+       <Price>139.99</Price>
+     </Product>
+     <Product>
+       <PID>KWDS850</PID>
+       <Manufacturer>KWD</Manufacturer>
+       <Name>KWD CD Receiver 180 Watts Max with Remote</Name>
+       <Price>159.99</Price>
+     </Product>
+     <Product>
+       <PID>KWDS870</PID>
+       <Manufacturer>KWD</Manufacturer>
+       <Name>KWD 180 Watts Max CD Player</Name>
+       <Price>309.99</Price>
+     </Product>
+     <Product>
+       <PID>FR1400</PID>
+       <Manufacturer>Frontier</Manufacturer>
+       <Name>Frontier CD Player 180 Watts Max with Detachable Face</Name>
+       <Price>129.99</Price>
+     </Product>
+     <Product>
+       <PID>FR2400</PID>
+       <Manufacturer>Frontier</Manufacturer>
+       <Name>Frontier CD Player Detachable Face 180 Watts Max</Name>
+       <Price>149.99</Price>
+     </Product>
+     <Product>
+       <PID>FR3400</PID>
+       <Manufacturer>Frontier</Manufacturer>
+       <Name>Frontier Detachable Face CD Player 200 Watts Max</Name>
+       <Price>149.99</Price>
+     </Product>
+     <Product>
+       <PID>FR3300</PID>
+       <Manufacturer>Frontier</Manufacturer>
+       <Name>Frontier CD Receiver with Detachable Flap Face</Name>
+       <Price>149.99</Price>
+     </Product>
+     <Product>
+       <PID>FR4400</PID>
+       <Manufacturer>Frontier</Manufacturer>
+       <Name>Frontier 200 Watts AM/FM CD Receiver with Flap face - Detachable Face</Name>
+       <Price>178.99</Price>
+     </Product>
+   </Group>
+   <Group>
+     <Group_Name>CD Player/Receiver ($200+)</Group_Name>
+     <Product>
+       <PID>AD500M</PID>
+       <Manufacturer>Addison</Manufacturer>
+       <Name>Addison Double Din CD/Cassette 180 Watts Max Steering Wheel Remote</Name>
+       <Price>229.99</Price>
+     </Product>
+     <Product>
+       <PID>ADCDMP</PID>
+       <Manufacturer>Addison</Manufacturer>
+       <Name>Addison In-Dash MP3 Player 200 Watts Max</Name>
+       <Price>229.99</Price>
+     </Product>
+     <Product>
+       <PID>CLKZ615</PID>
+       <Manufacturer>Clarkson</Manufacturer>
+       <Name>Clarkson 200 Watts Max CD Player</Name>
+       <Price>223.99</Price>
+     </Product>
+     <Product>
+       <PID>CLKZ715</PID>
+       <Manufacturer>Clarkson</Manufacturer>
+       <Name>Clarkson 200 Watts Max CD Player</Name>
+       <Price>234.99</Price>
+     </Product>
+     <Product>
+       <PID>CLKZ715</PID>
+       <Manufacturer>Clarkson</Manufacturer>
+       <Name>Clarkson Double DIN AM/FM/CD/Cassette</Name>
+       <Price>299.99</Price>
+     </Product>
+     <Product>
+       <PID>LX715K</PID>
+       <Manufacturer>Linax</Manufacturer>
+       <Name>Linax DIN+1/2 AM/FM/CD/Cassette Radio with Flip-Down Detach Face</Name>
+       <Price>249.99</Price>
+     </Product>
+     <Product>
+       <PID>LX4001</PID>
+       <Manufacturer>Linax</Manufacturer>
+       <Name>Linax AM/FM 4-CD Changer Reciever with Detachable Face</Name>
+       <Price>269.99</Price>
+     </Product>
+     <Product>
+       <PID>LX720K</PID>
+       <Manufacturer>Linax</Manufacturer>
+       <Name>Linax Double DIN AM/FM/CD/Cassette Radio with Flip-Dwn Detach Face</Name>
+       <Price>299.99</Price>
+     </Product>
+     <Product>
+       <PID>KWD750L</PID>
+       <Manufacturer>KWD</Manufacturer>
+       <Name>KWD EL Kameleon AM/FM/CD With Card Remote</Name>
+       <Price>239.99</Price>
+     </Product>
+     <Product>
+       <PID>KWDSH5</PID>
+       <Manufacturer>KWD</Manufacturer>
+       <Name>KWD All Aluminum CD Receiver with Hot New Motorized FacePlate</Name>
+       <Price>239.99</Price>
+     </Product>
+     <Product>
+       <PID>KWDSH77</PID>
+       <Manufacturer>KWD</Manufacturer>
+       <Name>KWD Rotary Encoder/Front Panel MP3 INPUT/Aluminum Face CD Receiver</Name>
+       <Price>239.99</Price>
+     </Product>
+     <Product>
+       <PID>KWDSH99</PID>
+       <Manufacturer>KWD</Manufacturer>
+       <Name>KWD AM/FM/CD Motor Driven Detachable Faceplate with MP3 Compatible Receiver</Name>
+       <Price>289.99</Price>
+     </Product>
+     <Product>
+       <PID>KWDSH770</PID>
+       <Manufacturer>KWD</Manufacturer>
+       <Name>KWD CD Receiver and Cassette Play Double Din W/Remote</Name>
+       <Price>309.99</Price>
+     </Product>
+     <Product>
+       <PID>KWDLX50</PID>
+       <Manufacturer>KWD</Manufacturer>
+       <Name>KWD EL Kameleon II AM/FM/CD With Card Type Remote</Name>
+       <Price>319.99</Price>
+     </Product>
+     <Product>
+       <PID>FR77DH</PID>
+       <Manufacturer>Frontier</Manufacturer>
+       <Name>Frontier 180 Watts AM/FM CD Receiver with Detachable Face</Name>
+       <Price>231.99</Price>
+     </Product>
+     <Product>
+       <PID>FR6300</PID>
+       <Manufacturer>Frontier</Manufacturer>
+       <Name>Frontier High Power CD Player with Slim Remote 180 Watts Max</Name>
+       <Price>234.99</Price>
+     </Product>
+     <Product>
+       <PID>FR7300</PID>
+       <Manufacturer>Frontier</Manufacturer>
+       <Name>Frontier 200 Watts AM/FM CD Receiver with Flap face - Detachable Face</Name>
+       <Price>264.99</Price>
+     </Product>
+     <Product>
+       <PID>FR3370</PID>
+       <Manufacturer>Frontier</Manufacturer>
+       <Name>Frontier XM READY Satellite Tuner 200 Watts Max with atenna</Name>
+       <Price>399.99</Price>
+     </Product>
+     <Product>
+       <PID>FR9300</PID>
+       <Manufacturer>Frontier</Manufacturer>
+       <Name>Frontier 180 Watts Max CD Player</Name>
+       <Price>489.99</Price>
+     </Product>
+   </Group>
+   <Group>
+     <Group_Name>Tape Player ($0-$50)</Group_Name>
+     <Product>
+       <PID>W160</PID>
+       <Manufacturer>Wilson</Manufacturer>
+       <Name>Wilson 100 Watts Max Digital AM/FM Auto Stop with detachable Face</Name>
+       <Price>32.99</Price>
+     </Product>
+     <Product>
+       <PID>W180</PID>
+       <Manufacturer>Wilson</Manufacturer>
+       <Name>Wilson 100 Watts Max AM/FM Auto Stop With Detachable Face</Name>
+       <Price>32.99</Price>
+     </Product>
+     <Product>
+       <PID>W165</PID>
+       <Manufacturer>Wilson</Manufacturer>
+       <Name>Wilson 100 Watts Max Digital AM/FM Auto Reverse with detachable Face</Name>
+       <Price>37.99</Price>
+     </Product>
+     <Product>
+       <PID>W178</PID>
+       <Manufacturer>Wilson</Manufacturer>
+       <Name>Wilson 100 Watts Max AM/FM Auto-Reverse with Detachable Flip Down Face</Name>
+       <Price>46.99</Price>
+     </Product>
+     <Product>
+       <PID>T100</PID>
+       <Manufacturer>Tower</Manufacturer>
+       <Name>Tower AM/FM Auto Stop Radio</Name>
+       <Price>14.99</Price>
+     </Product>
+     <Product>
+       <PID>T200</PID>
+       <Manufacturer>Tower</Manufacturer>
+       <Name>Tower AM/FM Auto Stop DIN Style Radio with 3 Band Equalizer</Name>
+       <Price>20.99</Price>
+     </Product>
+     <Product>
+       <PID>T300</PID>
+       <Manufacturer>Tower</Manufacturer>
+       <Name>Tower Pull-Out AM/FM Auto Stop Radio</Name>
+       <Price>24.99</Price>
+     </Product>
+     <Product>
+       <PID>T400</PID>
+       <Manufacturer>Tower</Manufacturer>
+       <Name>Tower AM/FM Auto Stop DIN Style Radio with 3 Band Eq and Speakers</Name>
+       <Price>29.99</Price>
+     </Product>
+     <Product>
+       <PID>T450</PID>
+       <Manufacturer>Tower</Manufacturer>
+       <Name>Tower Pull-Out AM/FM Auto Stop Radio with 3 Band Equalizer</Name>
+       <Price>29.99</Price>
+     </Product>
+     <Product>
+       <PID>T500</PID>
+       <Manufacturer>Tower</Manufacturer>
+       <Name>Tower Pull-Out AM/FM Auto Stop Reverse with 3 Band Equalizer</Name>
+       <Price>34.99</Price>
+     </Product>
+     <Product>
+       <PID>T550</PID>
+       <Manufacturer>Tower</Manufacturer>
+       <Name>AM/FM Digital Auto Reverse Radio with Detachable Face</Name>
+       <Price>39.99</Price>
+     </Product>
+     <Product>
+       <PID>T600</PID>
+       <Manufacturer>Tower</Manufacturer>
+       <Name>Tower Digital AM/FM Auto Stop Radio with Detachable Face and Pull Out Chassis</Name>
+       <Price>44.99</Price>
+     </Product>
+     <Product>
+       <PID>T650</PID>
+       <Manufacturer>Tower</Manufacturer>
+       <Name>Tower AM/FM Auto Reverse Radio with Flip-Down Detachable Face</Name>
+       <Price>49.99</Price>
+     </Product>
+    </Group>
+    <Group>
+      <Group_Name>Tape Player ($50-$100)</Group_Name>
+     <Product>
+       <PID>LX203FX</PID>
+       <Manufacturer>Linax</Manufacturer>
+       <Name>Linax 160 Watts Max Auto Reverse Cassette Fixed DIN Unit</Name>
+       <Price>59.99</Price>
+     </Product>
+     <Product>
+       <PID>LX470F</PID>
+       <Manufacturer>Linax</Manufacturer>
+       <Name>Linax 160 Watts Max 1 1/2 DIN AM/FM Auto Reverse Cassette</Name>
+       <Price>79.99</Price>
+     </Product>
+     <Product>
+       <PID>FR690</PID>
+       <Manufacturer>Frontier</Manufacturer>
+       <Name>Frontier 180 Watts Max Cassette Receiver with Detachable Face</Name>
+       <Price>89.99</Price>
+     </Product>
+     <Product>
+       <PID>FR720</PID>
+       <Manufacturer>Frontier</Manufacturer>
+       <Name>Frontier AM/FM Auto Reverse Cassette Receiver w/Detachable Face</Name>
+       <Price>59.99</Price>
+     </Product>
+     <Product>
+       <PID>FR750</PID>
+       <Manufacturer>Frontier</Manufacturer>
+       <Name>Frontier High Power AM/FM Auto Reverse Cassette Receiver</Name>
+       <Price>69.99</Price>
+     </Product>
+     <Product>
+       <PID>FR850</PID>
+       <Manufacturer>Frontier</Manufacturer>
+       <Name>Frontier 100 Watts Max Am/Fm Auto Reverse Cassette with Detachable Face</Name>
+       <Price>79.99</Price>
+     </Product>
+     <Product>
+       <PID>FR890</PID>
+       <Manufacturer>Frontier</Manufacturer>
+       <Name>Frontier 160 Watts Max Flip Down Detachable Face Auto Reverse with CD Changer Controls</Name>
+       <Price>82.99</Price>
+     </Product>
+     <Product>
+       <PID>TR28</PID>
+       <Manufacturer>Tower</Manufacturer>
+       <Name>Tower AM/FM-MPX Auto-Reverse Cassette Player</Name>
+       <Price>64.99</Price>
+     </Product>
+     <Product>
+       <PID>TR56</PID>
+       <Manufacturer>Tower</Manufacturer>
+       <Name>Tower Pull-Out AM/FM Auto Stop Reverse with 7 Band Equalizer</Name>
+       <Price>74.99</Price>
+     </Product>
+     <Product>
+       <PID>TR100</PID>
+       <Manufacturer>Tower</Manufacturer>
+       <Name>Tower AM/FM-MPX Auto Stop Pullout Radio</Name>
+       <Price>59.99</Price>
+     </Product>
+     <Product>
+       <PID>TR122</PID>
+       <Manufacturer>Tower</Manufacturer>
+       <Name>Tower AM/FM Digital Auto Reverse Radio with Flip-Down Detacable Face</Name>
+       <Price>69.99</Price>
+     </Product>
+     <Product>
+       <PID>TR141</PID>
+       <Manufacturer>Tower</Manufacturer>
+       <Name>Tower DIN+1/2 Cassette Radio </Name>
+       <Price>79.99</Price>
+     </Product>
+    </Group>
+</Inventory>

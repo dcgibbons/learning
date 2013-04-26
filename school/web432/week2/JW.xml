@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<jazz:Inventory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                xmlns:jazz="http://ecampus.phoenix.edu/jazz/ns"
+                xsi:schemaLocation="http://ecampus.phoenix.edu/jazz/ns CD.xsd">
+  <CD Category="Modern" CID="JW001305">
+    <Title>Kind of Blue</Title>
+    <Artist>Miles Davis</Artist>
+    <Artist>John Coltrane</Artist>
+    <Tracks>
+      <Track length="PT9H22M">So What</Track>
+      <Track length="PT9H46M">Freddie Freeloader</Track>
+      <Track length="PT5H37M">Blue in Green</Track>
+      <Track length="PT11H33M">All Blues</Track>
+      <Track length="PT9H26M">Flamenco Sketches</Track>
+    </Tracks>
+  </CD>
+  <CD Category="Bebop" CID="JW001312">
+    <Title>Cookin'</Title>
+    <Artist>Miles Davis</Artist>
+    <Tracks>
+      <Track length="PT5H57M">My Funny Valentine</Track>
+      <Track length="PT9H53M">Blues by Five</Track>
+      <Track length="PT4H22M">Airegin</Track>
+      <Track length="PT13H03M">Tune-Up</Track>
+    </Tracks>
+  </CD>
+  <CD Category="Modern" CID="JW015011">
+    <Title>Blue Train</Title>
+    <Artist>John Coltrane</Artist>
+    <Tracks>
+      <Track length="PT10H39M">Blue Train</Track>
+      <Track length="PT9H06M">Moment's Notice</Track>
+      <Track length="PT7H11M">Locomotion</Track>
+      <Track length="PT7H55M">I'm Old Fashioned</Track>
+      <Track length="PT7H03M">Lazy Bird</Track>
+    </Tracks>
+  </CD>
+  <CD Category="Modern" CID="JW002210">
+    <Title>Sarah Vaughan</Title>
+    <Artist>Sarah Vaughan</Artist>
+    <Artist>Clifford Brown</Artist>
+    <Tracks>
+      <Track length="PT3H58M">Lullaby of Birdland</Track>
+      <Track length="PT6H18M">April in Paris</Track>
+      <Track length="PT4H10M">He's My Guy</Track>
+      <Track length="PT5H49M">Jim</Track>
+      <Track length="PT4H41M">You're not the Kind</Track>
+      <Track length="PT4H48M">Embraceable You</Track>
+      <Track length="PT5H08M">I'm Glad there is You</Track>
+      <Track length="PT5H43M">September Song</Track>
+      <Track length="PT4H55M">It's Crazy</Track>
+    </Tracks>
+  </CD>
+  <CD Category="Swing" CID="JW014501">
+    <Title>Ellington at Newport</Title>
+    <Artist>Duke Ellington</Artist>
+    <Tracks>
+      <Track length="PT6H21M">Black and Tan Fantasy</Track>
+      <Track length="PT3H34M">Tea for Two</Track>
+      <Track length="PT4H27M">Take the A Train</Track>
+      <Track length="PT8H10M">Festival Junction</Track>
+      <Track length="PT7H09M">Blues to be There</Track>
+      <Track length="PT5H33M">Newport Up</Track>
+      <Track length="PT3H52M">Sophisticated Lady</Track>
+      <Track length="PT3H50M">Day In, Day Out</Track>
+      <Track length="PT14H20M">Dimuendo in Blue/Crescendo in Blue</Track>
+    </Tracks>
+  </CD>
+  <CD Category="Modern" CID="JW024181">
+    <Title>Saxophone Colossus</Title>
+    <Artist>Sonny Rollins</Artist>
+    <Tracks>
+      <Track length="PT6H46M">St. Thomas</Track>
+      <Track length="PT6H28M">You Don't Know What Love Is</Track>
+      <Track length="PT5H13M">Strode Rode</Track>
+      <Track length="PT10H06M">Moritat</Track>
+      <Track length="PT11H18M">Blue 7</Track>
+    </Tracks>
+  </CD>
+  <CD Category="Bebop" CID="JW031031">
+    <Title>The Cole Porter Songbook</Title>
+    <Artist>Charlie Parker</Artist>
+    <Artist>Cole Porter</Artist>
+    <Tracks>
+      <Track length="PT3H24M">Easy to Love</Track>
+      <Track length="PT3H10M">Begin the Beguine</Track>
+      <Track length="PT2H45M">Night and Day</Track>
+      <Track length="PT2H38M">What is This Thing Called Love</Track>
+      <Track length="PT3H18M">In the Still of the Night</Track>
+      <Track length="PT3H31M">I Get a Kick Out of You</Track>
+      <Track length="PT2H39M">Just One of Those Things</Track>
+      <Track length="PT3H17M">My Heart Belongs to Daddy</Track>
+      <Track length="PT3H31M">I've Got You Under My Skin</Track>
+      <Track length="PT5H33M">Love for Sale</Track>
+      <Track length="PT5H10M">I Love Paris</Track>
+    </Tracks>
+  </CD>
+  <CD Category="Modern" CID="JW061051">
+    <Title>The Sound of Jazz</Title>
+    <Artist>Billie Holiday</Artist>
+    <Artist>Count Basie</Artist>
+    <Artist>Red Allen</Artist>
+    <Artist>Lester Young</Artist>
+    <Artist>Coleman Hawkins</Artist>
+    <Tracks>
+      <Track length="PT4H46M">Wild Man Blues</Track>
+      <Track length="PT4H57M">Rosetta</Track>
+      <Track length="PT6H19M">Fine and Mellow</Track>
+      <Track length="PT6H53M">Blues</Track>
+      <Track length="PT4H27M">I Left my Baby</Track>
+      <Track length="PT4H43M">The Train and the River</Track>
+      <Track length="PT3H43M">Nervous</Track>
+      <Track length="PT5H53M">Dickie's Dream</Track>
+    </Tracks>
+  </CD>
+</jazz:Inventory>

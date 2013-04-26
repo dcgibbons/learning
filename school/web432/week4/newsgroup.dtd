@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT newsgroups (classCode, className, facilitator, students+, newsgroup+)>
+
+<!ELEMENT classCode (#PCDATA)>
+
+<!ELEMENT className (#PCDATA)>
+
+<!ELEMENT facilitator (#PCDATA)>
+
+<!ELEMENT students (studentName+)>
+
+<!ELEMENT studentName (#PCDATA)>
+
+<!ELEMENT newsgroup (name, post*)>
+<!ATTLIST newsgroup type CDATA #REQUIRED>
+
+<!ELEMENT name (#PCDATA)>
+
+<!ELEMENT post (author, timestamp, subject, postText)>
+
+<!ELEMENT author (#PCDATA)>
+
+<!ELEMENT subject (#PCDATA)>
+
+<!ELEMENT timestamp (#PCDATA)>
+
+<!ELEMENT postText (#PCDATA)>

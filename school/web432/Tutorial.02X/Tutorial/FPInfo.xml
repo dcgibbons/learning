@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+
+<Information>
+   <Title>Freezing Point Refrigerators</Title>
+   <Subtitle>Staff Information Page</Subtitle>
+   <Purpose>
+     <![CDATA[
+This page contains information on the staff of Freezing Point Refrigerators. 
+Staff members are divided into four groups: Accounting, Sales, Manufacturing,
+and Advertising. Each employee's name, department, position, phone number, years
+employed, and job status (full or part-time) is reported.
+     ]]>
+   </Purpose>
+   <Author>Catherine Davis</Author>
+   <Author_Email>mailto:cdavis@freezingpoint.com</Author_Email>
+</Information>

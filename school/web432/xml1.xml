@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet type="text/css" href="xml1.css" ?>
+<!-- this is a comment -->
+<specials>
+<title>Monthly Specials at the Jazz Warehouse</title>
+<message>
+<![CDATA[
+Here are some monthly Jazz specials to enjoy!!!
+]]>
+</message>
+
+<cd>Knd of Blue
+  <artist>Miles Davis</artist>
+  <priceus>Price (US $): $11.99</priceus>
+  <pricegb>Price (British &#163;): &#163;8.39</pricegb>
+  <track length="9:22">So What</track>
+  <track length="9:46">Freddie Freeloader</track>
+</cd>
+</specials>
+

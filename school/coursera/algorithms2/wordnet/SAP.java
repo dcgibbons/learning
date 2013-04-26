@@ -14,6 +14,7 @@ import java.util.Map;
 public class SAP
 {
     private Digraph G;
+    private DeluxeBFS lastBFS = null;
     private Map<String, Map<Integer, Integer>> cache;
 
     // constructor takes a digraph (not necessarily a Digraph)
@@ -51,21 +52,14 @@ public class SAP
         int shortestAncestor = -1;
         int shortestAncestorLength = Integer.MAX_VALUE;
 
-        for (int i = 0; i < this.G.V(); i++)
-        {
-            int vLength = cacheLookup(v, i);
-            if (vLength == -1) continue;
-
-            int wLength = cacheLookup(w, i);
-            if (wLength == -1) continue;
-
-            int length = vLength + wLength;
-            if (length < shortestAncestorLength) 
-            {
-                shortestAncestor = i;
-                shortestAncestorLength = length;
-            }
-        }
+        DeluxeBFS A;
+        if (lastBFS != null)
+            A = new DeluxeBFS(this.G, lastBFS, v, w);
+        else
+            A = new DeluxeBFS(this.G, v, w);
+        lastBFS = A;
+        shortestAncestor = A.getBestAncestor();
+        shortestAncestorLength = A.getBestAncestorLength();
 
         if (shortestAncestorLength != Integer.MAX_VALUE) 
             return shortestAncestorLength;
@@ -80,53 +74,16 @@ public class SAP
         int shortestAncestor = -1;
         int shortestAncestorLength = Integer.MAX_VALUE;
 
-        for (int i = 0; i < this.G.V(); i++)
-        {
-            int vLength = cacheLookup(v, i);
-            if (vLength == -1) continue;
-
-            int wLength = cacheLookup(w, i);
-            if (wLength == -1) continue;
-
-            int length = vLength + wLength;
-            if (length < shortestAncestorLength) 
-            {
-                shortestAncestor = i;
-                shortestAncestorLength = length;
-            }
-        }
+        DeluxeBFS A;
+        if (lastBFS != null)
+            A = new DeluxeBFS(this.G, lastBFS, v, w);
+        else
+            A = new DeluxeBFS(this.G, v, w);
+        lastBFS = A;
+        shortestAncestor = A.getBestAncestor();
+        shortestAncestorLength = A.getBestAncestorLength();
 
         return shortestAncestor;
-    }
-
-    private int cacheLookup(Iterable<Integer> v, int dest)
-    {
-        String vs = stringify(v);
-
-        Map<Integer, Integer> m = null;
-        if (cache.containsKey(vs))
-        {
-            m = cache.get(vs);
-            if (m.containsKey(dest))
-            {
-                return m.get(dest);
-            }
-        }
-        else
-        {
-            m = new HashMap<Integer, Integer>();
-            cache.put(vs, m);
-        }
-
-        DeluxeBFS A = new DeluxeBFS(this.G, v);
-        int n = -1;
-        if (A.hasPathTo(dest))
-        {
-            n = count(A.pathTo(dest));
-        }
-        m.put(dest, n);
-        return n;
-
     }
 
     private static String stringify(Iterable<Integer> it)

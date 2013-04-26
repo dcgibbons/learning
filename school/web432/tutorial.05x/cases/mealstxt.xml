@@ -1,0 +1,320 @@
+<?xml version="1.0" ?>
+<recipes>
+<heading>Chinese Recipes</heading>
+   <recipe>
+      <name>Beggar's Chicken</name>
+      <description>
+         Beggar's chicken is a traditional dish from Hangzhoui. Legend has
+         it that the disk was indeed created by beggars.
+      </description>
+      <ingredients>
+         <ingredient>
+            1 3lb fryer chicken
+         </ingredient>
+         <ingredient>
+            2 teaspoons salt
+         </ingredient>
+         <ingredient>
+            1 teaspoon ginger juice
+         </ingredient>
+         <ingredient>
+            4 tablespoons oil
+         </ingredient>
+         <ingredient>
+            1 chopped scallion
+         </ingredient>
+         <ingredient>
+            4 ounces shredded pork
+         </ingredient>
+         <ingredient>
+            1 tablespoon sherry
+         </ingredient>
+         <ingredient>
+            1 tablespoon light soy sauce
+         </ingredient>
+         <ingredient>
+            1 teaspoon sugar
+         </ingredient>
+         <ingredient>
+            2 ounces preserved Yuanne cabbage, julienne
+         </ingredient>
+         <ingredient>
+            aluminum foil
+         </ingredient>
+      </ingredients>
+      <instructions>
+         <step>Rub cleaned chicked with salt. Rub ginger juice inside of chicken.
+               Set aside.
+         </step>
+         <step>Heat 2 tablespoons of oil in wok. Stir-fry scallion. Add pork. 
+               Stir on high heat. Add sherry, sauce, and sugar. Remove to bowl.
+         </step>
+         <step>Heat 2 tablespoons of oil in wok. Stir-fry cabbage. Pour in
+               meat mixture. Stir-fry one minute.
+         </step>
+         <step>Stuff meat mixture into chicken. Wrap in aluminum foil and place
+               in pan.
+         </step>
+         <step>Back chicken 1 hr at 350 degrees. Turn up heat to 400 degrees
+               and bake 15 more minutes.
+         </step>
+         <step>Remove foil. Remove stuffing from chicken to platter. Cut 
+               chicken into bit-sized pieces. Arrange on top of stuffing.
+         </step>
+      </instructions>
+   </recipe>
+   <recipe>
+      <name>Chicken with Chestnuts</name>
+      <description>
+         A popular dish from Shanghai, this dish is quick and easy to make.
+      </description>
+      <ingredients>
+         <ingredient>
+            1 pound chestnuts
+         </ingredient>
+         <ingredient>
+            4 tablespoons oil
+         </ingredient>
+         <ingredient>
+            1 slice ginger, 1/8" thick
+         </ingredient>
+         <ingredient>
+            1 scallion, cut into four pieces
+         </ingredient>
+         <ingredient>
+            1 3lb fryer, cut into 2" pieces
+         </ingredient>
+         <ingredient>
+            2 tablespoons sherry
+         </ingredient>
+         <ingredient>
+            1/2 teaspoon salt
+         </ingredient>
+         <ingredient>
+            1/4 cup dark soy sauce
+         </ingredient>
+         <ingredient>
+            2 cups water
+         </ingredient>
+         <ingredient>
+            1 tablespoon sugar
+         </ingredient>
+      </ingredients>
+      <instructions>
+         <step>Cut chestnuts into halves. Cover with water. Simmer 30 minutes.
+               Remove shells and skin. Set aside.
+         </step>
+         <step>Heat oil in wok. Stir-fry ginger and scallions 30 seconds. Add
+               chicken. Stir-fry 1 minute. Add sherry, salt, soy sauce, and
+               water. Cover and simmer 30 minutes.
+         </step>
+         <step>Add chestnuts and sugar. Simmer 10 minutes more.
+         </step>
+         <step>Bring to high heat and cook 5 minutes. Remove to platter. 
+               Serve hot.
+         </step>
+      </instructions>
+   </recipe>
+   <recipe>
+      <name>Salted Duck</name>
+      <description>
+         This dish from Nanking is served cold. It works best on a buffet table.
+      </description>
+      <ingredients>
+         <ingredient>
+            1 5-lb duck
+         </ingredient>
+         <ingredient>
+            2 tablespoons salt
+         </ingredient>
+         <ingredient>
+            1 tablespoon ginger juice
+         </ingredient>
+         <ingredient>
+            Water
+         </ingredient>
+      </ingredients>
+      <instructions>
+         <step>Wash and clean duck. Wipe dry.
+         </step>
+         <step>Rub duck with salt inside and out. Wrap in foil. Refrigerate
+               3 days.
+         </step>
+         <step>Rub inside of duck with ginger juice.
+         </step>
+         <step>Put duck in large saucepan. Cover with water. Bring to boil.
+               Simmer 2 hours.
+         </step>
+         <step>Chill. Chop into bite-sized pieces and serve cold.
+         </step>
+      </instructions>
+   </recipe>
+   <recipe>
+      <name>Beef with Onions</name>
+      <description>
+         A quick and easy dish from Shanghai. Best served on a bed of rice.
+      </description>
+      <ingredients>
+         <ingredient>
+            1 lb beef steak, julienne
+         </ingredient>
+         <ingredient>
+            1 teaspoon salt
+         </ingredient>
+         <ingredient>
+            3 egg white
+         </ingredient>
+         <ingredient>
+            3 tablespoons cornstarch
+         </ingredient>
+         <ingredient>
+            4 cups oil for deep-frying
+         </ingredient>
+         <ingredient>
+            4 sliced onions
+         </ingredient>
+         <ingredient>
+            1 tablespoon dry sherry
+         </ingredient>
+         <ingredient>
+            1 tablespoon sugar
+         </ingredient>
+         <ingredient>
+            4 tablespoons dark soy sauce
+         </ingredient>
+      </ingredients>
+      <instructions>
+         <step>Combine beef, salt, egg white and cornstarch. Mix well.
+         </step>
+         <step>Heat oil in wok. Deep-fry beef until seared. Drain.
+         </step>
+         <step>Reheat 2 tablespoons of oil in wok. Add onions. Stir-fry
+               until soft and browned.
+         </step>
+         <step>Add beef, sherry, sugar, and soy sauce. Stir-fry 1 minute
+               until beef is glazed and brown.
+         </step>
+      </instructions>
+   </recipe>
+   <recipe>
+      <name>Szechwan Beef</name>
+      <description>
+         One of the classic chinese dishes.
+      </description>
+      <ingredients>
+         <ingredient>
+            1 lb flank steak, shredded
+         </ingredient>
+         <ingredient>
+            1 teaspoon salt
+         </ingredient>
+         <ingredient>
+            2 egg white
+         </ingredient>
+         <ingredient>
+            2 tablespoons cornstarch
+         </ingredient>
+         <ingredient>
+            4 cups oil for deep-frying
+         </ingredient>
+         <ingredient>
+            1/2 cup shredded bamboo shoots.
+         </ingredient>
+         <ingredient>
+            1/2 cup shredded green pepper
+         </ingredient>
+         <ingredient>
+            1 tablespoon dark soy sauce
+         </ingredient>
+         <ingredient>
+            1 teaspoon chili paste with garlic
+         </ingredient>
+         <ingredient>
+            1/2 ounce mung bean
+         </ingredient>
+      </ingredients>
+      <instructions>
+         <step>Mix beef, salt, egg white, and cornstarch.
+         </step>
+         <step>Heat oil in wok. Deep-fry beef 1 minute. Drain. Remove.
+         </step>
+         <step>Reheat 2 tablespoons of oil in wok. Stir-fry bamboo shoots
+               and green pepper 30 seconds. Add beef, soy sauce, chili paste
+               with garlic, and sugar. Stir-fy 1 minute. Remove.
+         </step>
+         <step>Reheat 2 cups of oil in wok to smoking hot. Deep-fry mung bean
+               1 second. Remove to platter. Pour meat over fried
+               mung bean.
+         </step>
+      </instructions>
+   </recipe>
+   <recipe>
+      <name>Twice-cooked Pork</name>
+      <description>
+         This Szechwan dish is extremely popular.
+      </description>
+      <ingredients>
+         <ingredient>
+            1 lb pork loin
+         </ingredient>
+         <ingredient>
+            2 cups water
+         </ingredient>
+         <ingredient>
+            5 tablespoons oil
+         </ingredient>
+         <ingredient>
+            1 leek, cut into 1" pieces
+         </ingredient>
+         <ingredient>
+            1/2 red pepper, cut into thin strips
+         </ingredient>
+         <ingredient>
+            1/2 green pepper, cut into thin strips
+         </ingredient>
+         <ingredient>
+            1 tablespoon bean sauce
+         </ingredient>
+         <ingredient>
+            1 teaspoon ginger
+         </ingredient>
+         <ingredient>
+            1 tablespoon sherry
+         </ingredient>
+         <ingredient>
+            1 tablespoon dark soy sauce
+         </ingredient>
+         <ingredient>
+            1 tablespoon chili paste with garlic
+         </ingredient>
+         <ingredient>
+            2 gloves minced garlic
+         </ingredient>
+         <ingredient>
+            1 thin slice minced ginger
+         </ingredient>
+         <ingredient>
+            2 scallion, cut into 1" pieces
+         </ingredient>
+      </ingredients>
+      <instructions>
+         <step>Cook pork in water 20 minutes. Drain and cool.
+         </step>
+         <step>Cut pork across grains into paper-thin slices.
+         </step>
+         <step>Heat 2 tablesppons of oil in wok. Stir-fry leek until wilted.
+               Add red and green peppers. Stir-fry 30 seconds. Remove.
+         </step>
+         <step>Heat 2 more tablespoons of oil in wok. Add pork. Stir-fry
+               1 minute. Remove.
+         </step>
+         <step>Heat 1 tablespoon oil in wok. Stir-fry bean sauce under
+               moderate heat. Add sugar. Stir-fry 1 minute. Add pork, leek,
+               and peppers. Cook over high heat for 1 minute. Add sherry, 
+               soy sauce, and chili paste with garlic. Add garlic and
+               ginger. Stir-fry thoroughly. Add scallion. Stir fry for 
+               another 30 seconds.
+         </step>
+      </instructions>
+   </recipe>
+</recipes>

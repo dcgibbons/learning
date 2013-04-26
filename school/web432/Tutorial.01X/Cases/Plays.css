@@ -1,0 +1,15 @@
+Play {font-family: Times New Roman; font-size:12pt}
+
+Summary {display:block}
+
+Title {font-family: Arial, Helvetica, Sans-serif; font-size:24pt;
+       color:blue; font-weight:bold; display:block; margin-bottom:15pt}
+
+Act {display:block; margin-top:15pt}
+
+Act_Number{font-weight:bold; color:blue; font-family:Arial, Helvetica, Sans-serif}
+
+Scene {display:list-item; margin-left:15pt; list-style-type:square}
+
+Scene_Number{font-weight:bold}
+

@@ -1,0 +1,8 @@
+README
+Week 4 Programming Assignment - Mortgage Payment Calculator
+POS/407 - Computer Programming II
+David C. Gibbons, dcgibbons@email.uophx.edu
+
+To run this assignment, use the following Java command-line:
+
+java -classpath . Wk4DavidGibbons

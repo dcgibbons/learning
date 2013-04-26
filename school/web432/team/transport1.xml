@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Riordan Manufacturing Supply Chain
+  XML Sample Data - Transportation
+  Learning Team A Final Project
+  Janet Carlin, David C. Gibbons
+  WEB/432 - Web Programming III
+  Ganesh Shan
+  January 8, 2007
+  -->
+<!DOCTYPE supplychain SYSTEM "supplychain.dtd">
+<supplychain timestamp="01/07/2007 18:54">
+  <transport>
+    <vendor>Huffman Trucking</vendor>
+    <source id="brooks001">Brooks Chemical Supply</source>
+    <destination id="riordan001">Riordan Manufacturing</destination>
+    <shipments>
+      <shipment id="000993121" customerId="993921"/>
+      <shipment id="000993122" customerId="993922"/>
+    </shipments>
+  </transport>
+</supplychain>
+

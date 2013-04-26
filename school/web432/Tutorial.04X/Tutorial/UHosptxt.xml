@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+
+<Report>
+
+   <Patients>
+      <Patient>
+         <Name>Cynthia Dibbs</Name>
+         <ID>MR890-041-02</ID>
+         <DOB>1945-05-22</DOB>
+         <Age>58</Age>
+         <Stage>II</Stage>
+         <Performance Scale="Karnofsky">0.81</Performance>
+      </Patient>
+      <Patient>
+         <Name>Karen Wilkes</Name>
+         <ID>MR771-121-10</ID>
+         <DOB>1959-02-24</DOB>
+         <Age>44</Age>
+         <Stage>II</Stage>
+         <Comment>Dropped out of study.</Comment>
+         <Performance Scale="Karnofsky">0.84</Performance>
+      </Patient>
+      <Patient>
+         <Name>Olivia Sanchez</Name>
+         <ID>MR701-891-05</ID>
+         <DOB>1958-08-14</DOB>
+         <Age>45</Age>
+         <Stage>I</Stage>
+         <Comment>Possibly Stage I/II</Comment>
+         <Comment>Karnofsky performance rating unavailable.</Comment>
+         <Performance Scale="Bell">0.89</Performance>
+      </Patient>
+      <Patient>
+         <Name>Alice Russell</Name>
+         <ID>MR805-891-08</ID>
+         <DOB>1952-09-14</DOB>
+         <Age>51</Age>
+         <Stage>II</Stage>
+         <Performance Scale="Karnofsky">0.76</Performance>
+      </Patient>
+      <Patient>
+         <Name>Brenda Browne</Name>
+         <ID>MR815-741-03</ID>
+         <DOB>1964-04-25</DOB>
+         <Age>39</Age>
+         <Stage>I</Stage>
+         <Performance Scale="Karnofsky">0.88</Performance>
+      </Patient>
+   </Patients>
+
+   <Study>
+      <Name>
+         <Title>Tamoxifen Breast Cancer Study</Title>
+         <Subtitle>Randomized Phase 3 Clinical Trial</Subtitle>
+      </Name>
+      <PI>Dr. Diane West</PI>
+   </Study>
+
+</Report>

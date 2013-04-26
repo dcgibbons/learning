@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Riordan Manufacturing Supply Chain
+  XML Sample Data - Product Delivery
+  Learning Team A Final Project
+  Janet Carlin, David C. Gibbons
+  WEB/432 - Web Programming III
+  Ganesh Shanmuganathan
+  January 8, 2007
+  -->
+<!DOCTYPE supplychain SYSTEM "supplychain.dtd">
+<supplychain timestamp="2006/01/07 17:32">
+  <fulfillment orderId="993921" customerOrderId="bot000321">
+    <customer>Bickford Organic Juices</customer>
+    <vendor>Riordan Manfacturing</vendor>
+    <product productCode="pb10">Plastic Bottles, 10oz</product>
+    <quantity>10000</quantity>
+  </fulfillment>
+</supplychain>

@@ -1,0 +1,10 @@
+bin\Debug\MortgageCalculator.exe
+bin\Debug\MortgageCalculator.pdb
+bin\Debug\MortgageCalculator.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\MortgageCalculator.MortgageForm.resources
+obj\Debug\MortgageCalculator.Resources.resources
+obj\Debug\MortgageCalculator.vbproj.GenerateResource.Cache
+obj\Debug\MortgageCalculator.exe
+obj\Debug\MortgageCalculator.xml
+obj\Debug\MortgageCalculator.pdb
