@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rich Graph Example using HTML5's Canvas Element</title>
+  </head>
+
+  <body>
+    <h1>Rich Graph Example using HTML5's Canvas Element</h1>
+
+    <canvas id="graph1" width="500" height="200">
+    This text is displayed if your browser sucks.
+    </canvas>
+
+    <script type="text/javascript">
+    var graph1 = document.getElementById('graph1');
+    var context = graph1.getContext('2d');
+
+    // Raw data, such as what might come back from a server query.
+    data = [
+      { value: 9.9430, time: new Date(2010, 4, 9, 7, 50, 0, 0) },
+      { value: 0.0000, time: new Date(2010, 4, 9, 7, 55, 0, 0) },
+      { value: 0.0000, time: new Date(2010, 4, 9, 8, 00, 0, 0) },
+      { value: 0.0000, time: new Date(2010, 4, 9, 8, 05, 0, 0) },
+      { value: 5.5828, time: new Date(2010, 4, 9, 8, 10, 0, 0) },
+      { value: 1.0000, time: new Date(2010, 4, 9, 8, 15, 0, 0) },
+      { value: 25.3120, time: new Date(2010, 4, 9, 8, 20, 0, 0) },
+      { value: 45.8210, time: new Date(2010, 4, 9, 8, 25, 0, 0) },
+      { value: 98.3211, time: new Date(2010, 4, 9, 8, 30, 0, 0) },
+      { value: 96.1290, time: new Date(2010, 4, 9, 8, 35, 0, 0) },
+      { value: 94.9128, time: new Date(2010, 4, 9, 8, 40, 0, 0) },
+      { value: 98.3219, time: new Date(2010, 4, 9, 8, 45, 0, 0) },
+      { value: 32.4912, time: new Date(2010, 4, 9, 8, 50, 0, 0) },
+    ];
+
+    // Calculate the maximums in the provided data.
+    var maxY = 0.0;
+    for (var i = 0; i < data.length; i++) {
+      maxY = Math.max(data[i].value, maxY);
+    }
+    var dataMaxY = Math.ceil(maxY); // raise to the next ceiling value
+    var dataMaxX = data.length; // should be the time... TODO
+
+    var fontHeight = 12;
+    var font = "12px arial, sans-serif";
+
+    var xStart = 0;
+    var yStart = fontHeight * 2;
+    var xEnd = graph1.width;
+    var yEnd = graph1.height;
+
+    // Determine how many pixel units equal one user space coordinate.
+    var xStep = dataMaxX / (xEnd - xStart);
+    var yStep = dataMaxY / (yEnd - yStart);
+
+    // Create an array of 2D points to represent the user space
+    // coordinates of each data item.
+    points = new Array(data.length);
+    for (var i = 0; i < data.length; i++) {
+      var x = i / xStep + xStart;
+      var y = data[i].value / yStep + yStart;
+      points[i] = { x: x, y: y };
+    }
+
+    // Save the graphics context before we begin mucking with it.
+    context.save();
+
+    // Create a transform so that the graph portion of the chart can be
+    // drawn using a bottom-left origin instead of the default upper-left.
+    context.translate(0, yEnd);
+    context.scale(1.0, -1.0);
+
+    // Draw our path using the appropriate color.
+    context.beginPath();
+    context.strokeStyle = 'black';
+    context.lineWidth = 5;
+    context.moveTo(points[0].x, points[0].y);
+    for (var i = 1; i < points.length; i++) {
+      context.lineTo(points[i].x, points[i].y);
+    }
+    context.stroke();
+    context.restore();
+
+    // Step2: Mouse Tracking!
+    graph1.addEventListener('mousemove', mouseWatcher, false);
+
+    function mouseWatcher(evt) {
+      // Get the mouse position relative to the canvas element. This stuff
+      // is still gnarly across browsers. Here we're assuming we need to
+      // figure out the offset the canvas has in the client area, so our
+      // mouse position is really relative to the canvas, not the client area.
+      var x = graph1.offsetLeft + evt.clientX;
+      var y = graph1.height + graph1.offsetTop - evt.clientY;
+
+      // Get the data point at this X position
+      var foundPoint = -1;
+      var x1 = points[0].x;
+      for (var i = 1; i < points.length; i++) {
+        var x2 = points[i].x;
+        if (x >= x1 && x <= x2) {
+          foundPoint = i-1;
+          break;
+        }
+      }
+      if (foundPoint >= 0) {
+        txt = "" + data[foundPoint].value.toFixed(2) + " @ " + data[foundPoint].time.toString();
+
+        context.save();
+        context.font = font;
+        context.clearRect(0, yEnd - fontHeight, xEnd, fontHeight);
+        context.fillText(txt, 0, yEnd, xEnd);
+        context.restore();
+      }
+    }
+
+    </script>
+  </body>
+</html>
