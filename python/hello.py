@@ -1,11 +1,13 @@
-#! /usr/bin/env python
-#
-# Hello World for Python
-#
-# Chad Gibbons
-# dcgibbons@gmail.com
-# August 19, 2012
-#
+from Interface import Base
 
-if __name__ == '__main__':
-    print "Hello, world!"
+class Hello(Base):
+    """ The Hello interface provides greetings. """
+
+    def hello(self, name):
+        """ Say hello to the name """
+
+Class HelloComponent:
+    __implements__ = Hello
+
+    def hello(self, name):
+        return "hello %s!" % name
