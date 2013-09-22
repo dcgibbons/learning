@@ -6,3 +6,4 @@ priv
 *.plt
 *.dSYM
 *.class
+*.DS_Store
