@@ -7,3 +7,4 @@ priv
 *.dSYM
 *.class
 *.DS_Store
+a.out
