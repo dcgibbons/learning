@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
+#include <time.h>
 
 #define END_OF_WORD_FLAG -1
 
@@ -45,6 +46,8 @@ void trie_insert(const char* word)
 
 void load_words(const char* words_filename)
 {
+    clock_t start = clock();
+
     FILE* fp = fopen(words_filename, "r");
     if (!fp) {
         perror(words_filename);
@@ -52,11 +55,17 @@ void load_words(const char* words_filename)
     }
 
     char line[BUFSIZ];
+    size_t nwords = 0;
     while (fgets(line, sizeof(line), fp)) {
         trie_insert(line);
+        nwords++;
     }
 
     fclose(fp);
+
+    clock_t end = clock();
+    double time_spent = (double)(end-start) / CLOCKS_PER_SEC;
+    printf("%f seconds to load dictionary of %d words\n", time_spent, nwords);
 }
 
 void find_words(trienode_t* p, char* buffer, const int pos, const size_t max)
