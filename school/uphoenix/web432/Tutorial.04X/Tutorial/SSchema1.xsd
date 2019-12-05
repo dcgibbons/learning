@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Schema for breast cancer studies -->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns="http://uhosp/studies/ns"
+            targetNamespace="http://uhosp/studies/ns">
+
+   <xsd:element name="Study">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element name="Name">
+               <xsd:complexType>
+                  <xsd:sequence>
+                     <xsd:element name="Title" />
+                     <xsd:element name="Subtitle" />
+                  </xsd:sequence>
+               </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PI" type="xsd:string" />
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+
+</xsd:schema>

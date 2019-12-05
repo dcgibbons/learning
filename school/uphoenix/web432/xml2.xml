@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<mystuff xmlns:cust="uophx/web432/ns customers" 
+         xmlns:vend="uophx/web432/ns vendors">
+  <cust:customer>
+    <cust:name>blahblah</cust:name>
+    <cust:address>blahblah</cust:address>
+  </cust:customer>
+  <vend:vendor>
+    <vend:name>foofoo</vend:name>
+    <vend:address>foofoo</vend:address>
+  </vend:vendor>
+</mystuff>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<app:myapp xmlns:app="mycompany/myapp/ns"
-           xmlns:jdbc="sun/java/jdbc/ns"
-           xmlns:logging="apache/log4j/ns">
-  <app:name>myapp</app:name>
-  <jdbc:datasource>database config stuff here</jdbc:datasource>
-  <logging:logfile>logging config stuff here</logging:logfile>
-</app:myapp>

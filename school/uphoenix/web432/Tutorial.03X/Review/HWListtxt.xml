@@ -1,0 +1,35 @@
+<Hardware>
+   <Model MID="DCT3" Category="Camera"> Digital Camera 3 Mpx </Model>
+   <Manufacturer> Tapan Inc. </Manufacturer>
+   <MPrice> 599.95 </MPride>
+</Hardware>
+<Hardware>
+   <Model MID="DCT5" Category="Camera" SBundle="PS50W"> Digital Camera 5 Mpx </Model>
+   <Manufacturer> Tapan Inc. </Manufacturer>
+   <MPrice> 749.50 </MPrice>
+</Hardware>
+<Hardware>
+   <Model MID="DCT3Z" Category="Camera"> Digital Camera 3 Mpx -zoom </Model>
+   <Manufacturer> Tapan Inc. </Manufacturer>
+   <MPrice> 699.95 </MPrice>
+</Hardware>
+<Hardware>
+   <Model MID="DCT5Z" Category="Camera" SBundle="PA80W"> Digital Camera 5 Mpx -zoom </Model>
+   <Manufacturer> Tapan Inc. </Manufacturer>
+   <MPrice> 889.50 </MPrice>
+</Hardware>
+<Hardware>
+   <Model MID="SCL4C" Category="Scanner" SBundle="SMT30W"> Flatbed Scanner 4C </Model>
+   <Manufacturer> Linton Inc. </Manufacturer>
+   <MPrice> 177.99 </MPrice>
+</Hardware>
+<Hardware>
+   <Model MID="SCL4CII" Category="Scanner" SBundle="SMT30W"> Flatbed Scanner 4CII </Model>
+   <Manufacturer> Linton Inc. </Manufacturer>
+   <MPrice> 228.29 </MPrice>
+</Hardware>
+<Hardware>
+   <Model MID="LDT" Category="Tablet"> Digital Tablet </Model>
+   <Manufacturer> Linton Inc. </Manufacturer>
+   <MPrice> 129.50 </MPrice>
+</Hardware>

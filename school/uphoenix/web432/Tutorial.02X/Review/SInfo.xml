@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+
+<Information>
+   <Title>Freezing Point Refrigerators</Title>
+   <Subtitle>Product Information Page</Subtitle>
+   <Purpose>
+     <![CDATA[
+This page contains information about the different models of Freezing Point
+refrigerators. For each model, this page reports the model name, price, capacity,
+dimensions, energy efficiency, and the location of the freezer unit.
+     ]]>
+   </Purpose>
+   <Author>Jason Lewis</Author>
+   <Author_Email>mailto:jlewis@freezingpoint.com</Author_Email>
+</Information>

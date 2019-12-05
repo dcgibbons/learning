@@ -1,0 +1,191 @@
+/*
+ * pos370-wk4-dcg.c
+ * Week Four Program for David C. Gibbons
+ * POS/370 - Programming Concepts
+ * November 6, 2005
+ * Version 2.00
+ */
+
+
+/* standard library include files */
+#include <assert.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+
+#define MAX_CURRENCIES	6
+
+
+// a data structure used to store a currency and its exchange rate
+typedef struct {
+    char* currencyName;
+    double exchangeRate;
+} currency_t;
+
+
+/* forward reference for internal functions */
+void displayGreeting();
+void populateCurrencies(currency_t currencies[]);
+int getCurrencySelection(currency_t currencies[]);
+double getCurrencyAmount(char* currencyName);
+void convertCurrency(char* currencyName, 
+                     double excchangeRate, 
+                     double currencyAmount);
+
+
+/* main program entry point */
+int main() 
+{
+    int whichCurrency;
+    double currencyAmount;
+    currency_t currencies[MAX_CURRENCIES];
+
+    displayGreeting();
+    populateCurrencies(currencies);
+
+    // determine which currency the user wishes to convert and loop until
+    // they are ready to exit
+    while ((whichCurrency = getCurrencySelection(currencies)) != -1)
+    {
+        char* currencyName = currencies[whichCurrency].currencyName;
+        double exchangeRate = currencies[whichCurrency].exchangeRate;
+
+        // determine how much of the currency the user wishes to convert
+        if ((currencyAmount = getCurrencyAmount(currencyName)) > 0.0)
+        {
+            convertCurrency(currencyName, exchangeRate, currencyAmount);
+        }
+    }
+
+    return EXIT_SUCCESS;
+}
+
+
+/* displays a greeting message about this program */
+void displayGreeting()
+{
+    puts("Currency Conversion\n");
+}
+
+
+/* populates the currencies array with the current exchange rates */
+void populateCurrencies(currency_t currencies[])
+{
+    int n = 0;
+
+    // populate the currencies array - Miracle C doesn't support a static
+    // initialization of an array, so this uglyness is necessary
+    // these exchange rates were retrieved from 
+    // http://finance.yahoo.com/currency as of the close of business 
+    // on November 9, 2005
+    currencies[n].currencyName = "Yen";
+    currencies[n++].exchangeRate = 117.7650;
+
+    currencies[n].currencyName = "Euro";
+    currencies[n++].exchangeRate = 0.8370;
+
+    currencies[n].currencyName = "Can $";
+    currencies[n++].exchangeRate = 1.1862;
+
+    currencies[n].currencyName = "U.K.";
+    currencies[n++].exchangeRate = 0.5738;
+
+    currencies[n].currencyName = "AU $";
+    currencies[n++].exchangeRate = 1.3638;
+
+    currencies[n].currencyName = "Swiss Franc";
+    currencies[n++].exchangeRate = 1.3105;
+
+    assert(n == MAX_CURRENCIES);
+}
+
+
+/* determine which currency the user wishes to convert; -1 will be returned
+   if the user did not make a valid selection */
+int getCurrencySelection(currency_t currencies[]) 
+{
+    char lineBuffer[BUFSIZ];
+    int selection = -1;
+    int i;
+
+    // display the menu of choices
+    do
+    {
+        printf("\nCurrency Selection\n");
+        for (i = 0; i < MAX_CURRENCIES; i++)
+        {
+            // display the menu option for the currency, but ensure that the
+            // menu selections are one-based instead of zero-based
+            printf("%02d. %s\n", i + 1, currencies[i].currencyName);
+        }
+        printf("%02d. Exit Program\n", i + 1 );
+        printf("\nEnter selection: ");
+        fflush(stdout);
+    
+        // determine the user's selection - retrieve a line buffer first so
+        // scanf doesn't have to deal with continued errors in the input stream
+        fflush(stdin);
+        if (fgets(lineBuffer, sizeof(lineBuffer), stdin) == NULL)
+        {
+            // end-of-file! go ahead and exit
+            selection = -1;
+            break;
+        }
+        else
+        {
+            if (sscanf(lineBuffer, "%d", &selection) == 1)
+            {
+                selection--; // fix selection to be an zero-based array offset
+                // verify that the selection is within the valid range of
+                // currencies and if not set the selection to -1
+                if (selection < 0 || selection > MAX_CURRENCIES)
+                {
+                    selection = -1;
+                    printf("\nInvalid menu selection. Please try again.\n");
+                }
+                else if (selection == MAX_CURRENCIES)
+                {
+                    // time to exit!
+                    selection = -1;
+                    break;
+                }
+            }
+        }
+    }
+    while (selection == -1);
+
+    return selection;
+}
+
+
+/* retrieves the amount of currency to convert to dollars; if an invalid 
+   value was input by the user then 0.0 is returned */
+double getCurrencyAmount(char* currencyName)
+{
+    char lineBuffer[BUFSIZ];
+    double currencyAmount = 0.0;
+
+    printf("Enter amount of %s currency to convert to U.S. $: ", currencyName);
+    fflush(stdout); // force output to be displayed before newline is sent
+
+    // determine the user's selection - retrieve a line buffer first so
+    // scanf doesn't have to deal with continued errors in the input stream
+    if (fgets(lineBuffer, sizeof(lineBuffer), stdin) != NULL)
+    {
+        sscanf(lineBuffer, "%lf", &currencyAmount);
+    }
+
+    return currencyAmount;
+}
+
+
+/* converts the specified currency to dollars using the given exchange rate */
+void convertCurrency(char* currencyName,
+                     double exchangeRate,
+                     double currencyAmount)
+{
+    double dollars = (1.0 / exchangeRate) * currencyAmount;
+    printf("%.4lf %s = %.4lf U.S. $\n",
+        currencyAmount, currencyName, dollars);
+}
+

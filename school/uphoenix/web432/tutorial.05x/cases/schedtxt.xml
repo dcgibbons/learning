@@ -1,0 +1,117 @@
+<?xml version="1.0" ?>
+<reservations>
+<heading>Cutler Convention Center</heading>
+<date>Monday, October 11th 2004</date>
+<columns>
+   <name>Room</name>
+   <time>7:00am</time>
+   <time>8:00am</time>
+   <time>9:00am</time>
+   <time>10:00am</time>
+   <time>11:00am</time>
+   <time>12:00pm</time>
+   <time>1:00pm</time>
+   <time>2:00pm</time>
+   <time>3:00pm</time>
+   <time>4:00pm</time>
+   <time>5:00pm</time>
+</columns>
+<room>
+   <name>Sunrise Room</name>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+</room>
+<room>
+   <name>Granger Hall</name>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+</room>
+<room>
+   <name>Canyon View</name>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+</room>
+<room>
+   <name>Hillstadt Room</name>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+</room>
+<room>
+   <name>Alcove</name>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+</room>
+<room>
+   <name>Mountain View</name>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+</room>
+<room>
+   <name>Douglas Hall</name>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="yes">used</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+   <used class="no">free</used>
+</room>
+</reservations>

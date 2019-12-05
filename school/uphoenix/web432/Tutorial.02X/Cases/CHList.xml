@@ -1,0 +1,225 @@
+<?xml version="1.0" ?>
+<Class>
+   <Student>
+      <Name>Tom Aaron</Name>
+      <Photo>taaron.jpg</Photo>
+      <Address>
+         <Street>4 North Glendale</Street>
+         <City>Cutler</City>
+         <State>WI</State>
+         <ZIP>50411</ZIP>
+      </Address>
+      <Spouse>Joan</Spouse>
+      <Children>
+         <Child>
+            <CName>Lisa</CName>
+            <CBirth>6/1/1954</CBirth>
+         </Child>
+         <Child>
+            <CName>Andrew</CName>
+            <CBirth>3/15/1957</CBirth>
+         </Child>
+      </Children>
+      <Drama>false</Drama>
+      <Art>false</Art>
+      <Debate>true</Debate>
+      <Forensics>flase</Forensics>
+      <Football>true</Football>
+      <Baseball>false</Baseball>
+      <Basketball>true</Basketball>
+      <Track>false</Track>
+      <Notes>
+      <![CDATA[
+Class valedictorian
+Class president
+Lettered in both football and basketball
+Second Team All-State Football Team: 1953
+National Merit Honor winner
+Voted "Most Likely to Succeed"
+        ]]>
+      </Notes> 
+   </Student>
+   <Student>
+      <Name>Teresa Davis</Name>
+      <Photo>tdavis.jpg</Photo>
+      <Address>
+         <Street>214 Maple Avenue</Street>
+         <City>Crosston</City>
+         <State>WI</State>
+         <ZIP>53801</ZIP>
+      </Address>
+      <Spouse>Donad</Spouse>
+      <Children>
+         <Child>
+            <CName>Daniel</CName>
+            <CBirth>2/14/1953</CBirth>
+         </Child>
+         <Child>
+            <CName>Michael</CName>
+            <CBirth>9/1/1955</CBirth>
+         </Child>
+         <Child>
+            <CName>Kevin</CName>
+            <CBirth>12/14/1958</CBirth>
+         </Child>
+         <Child>
+            <CName>Patrick</CName>
+            <CBirth>6/15/1961</CBirth>
+         </Child>
+         <Child>
+            <CName>Myles</CName>
+            <CBirth>8/22/1965</CBirth>
+         </Child>
+         <Child>
+            <CName>Christopher</CName>
+            <CBirth>4/14/1969</CBirth>
+         </Child>
+      </Children>
+      <Drama>true</Drama>
+      <Art>true</Art>
+      <Debate>false</Debate>
+      <Forensics>true</Forensics>
+      <Football>false</Football>
+      <Baseball>true</Baseball>
+      <Basketball>false</Basketball>
+      <Track>true</Track>
+      <Notes>
+      <![CDATA[
+National Merit Honor winner
+Lettered in both Girls Track and Softball
+      ]]>
+      </Notes>
+   </Student>
+   <Student>
+      <Name>Eileen McDougal</Name>
+      <Photo>emcd.jpg</Photo>
+      <Address>
+         <Street>67 Atwood Avenue</Street>
+         <City>Hill Creek</City>
+         <State>MI</State>
+         <ZIP>46781</ZIP>
+      </Address>
+      <Spouse>Kevin</Spouse>
+      <Drama>false</Drama>
+      <Art>true</Art>
+      <Debate>false</Debate>
+      <Forensics>false</Forensics>
+      <Football>false</Football>
+      <Baseball>false</Baseball>
+      <Basketball>false</Basketball>
+      <Track>false</Track>
+      <Notes>
+      <![CDATA[
+Class salutatorian
+Class vice president
+Art Club president
+National Merit Honor winner
+         ]]>
+      </Notes>
+   </Student>
+   <Student>
+      <Name>Richard Shapiro</Name>
+      <Photo>rshapiro.jpg</Photo>
+      <Address>
+         <Street>77 Nolton Drive</Street>
+         <City>Chicago</City>
+         <State>IL</State>
+         <ZIP>67871</ZIP>
+      </Address>
+      <Spouse>Cathy</Spouse>
+      <Children>
+         <Child>
+            <CName>Rebecca</CName>
+            <CBirth>7/4/1955</CBirth>
+         </Child>
+         <Child>
+            <CName>Robert</CName>
+            <CBirth>1/24/1963</CBirth>
+         </Child>
+         <Child>
+            <CName>Jeffrey</CName>
+            <CBirth>10/21/1966</CBirth>
+         </Child>
+      </Children>
+      <Drama>false</Drama>
+      <Art>false</Art>
+      <Debate>false</Debate>
+      <Forensics>false</Forensics>
+      <Football>true</Football>
+      <Baseball>true</Baseball>
+      <Basketball>true</Basketball>
+      <Track>false</Track>
+      <Notes>
+      <![CDATA[
+Lettered in football, basketball, and baseball
+First Team All-Conference Football Team: 1953
+First Team All-Conference Basketball Team: 1953
+President of the ROTC
+Special Citation: Young Patriots Club
+Eagle Scout
+         ]]>
+      </Notes>
+   </Student>
+   <Student>
+      <Name>Barbara Wills</Name>
+      <Photo>bwills.jpg</Photo>
+      <Address>
+         <Street>11 Aktens Way</Street>
+         <City>Albertson</City>
+         <State>MN</State>
+         <ZIP>59811</ZIP>
+      </Address>
+      <Spouse>Terry</Spouse>
+      <Children>
+         <Child>
+            <CName>Mary</CName>
+            <CBirth>9/30/1959</CBirth>
+         </Child>
+      </Children>
+      <Drama>true</Drama>
+      <Art>true</Art>
+      <Debate>false</Debate>
+      <Forensics>true</Forensics>
+      <Football>false</Football>
+      <Baseball>false</Baseball>
+      <Basketball>false</Basketball>
+      <Track>false</Track>
+      <Notes>
+      <![CDATA[        
+Drama Club president
+Winner of the "Young Americans" essay contest
+         ]]>
+      </Notes>
+   </Student>
+   <Student>
+      <Name>Catherine Zims</Name>
+      <Photo>czims.jpg</Photo>
+      <Address>
+         <Street>44 South Street</Street>
+         <City>Culbert</City>
+         <State>MN</State>
+         <ZIP>78712</ZIP>
+      </Address>
+      <Spouse>Philip</Spouse>
+      <Children>
+         <Child>
+            <CName>Thomas</CName>
+            <CBirth>3/16/1961</CBirth>
+         </Child>
+      </Children>
+      <Drama>false</Drama>
+      <Art>true</Art>
+      <Debate>false</Debate>
+      <Forensics>false</Forensics>
+      <Football>false</Football>
+      <Baseball>false</Baseball>
+      <Basketball>false</Basketball>
+      <Track>true</Track>
+      <Notes>
+      <![CDATA[      
+Art Club vice president
+Lettered in track
+         ]]>
+      </Notes>
+   </Student>
+</Class>

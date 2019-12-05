@@ -1,0 +1,15 @@
+#
+# 7 year mortgage
+#
+5.35
+
+#
+# 15 year mortgage
+#
+5.50
+
+#
+# 30 year mortgage
+#
+5.75  
+

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\Mortgage Calculator\", "Mortgage Calculator\", "{CBC074B0-81B6-46D1-BA33-DB853D9458DF}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/Mortgage Calculator"
+		Debug.AspNetCompiler.PhysicalPath = "Mortgage Calculator\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Mortgage Calculator\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Mortgage Calculator"
+		Release.AspNetCompiler.PhysicalPath = "Mortgage Calculator\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Mortgage Calculator\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "2657"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBC074B0-81B6-46D1-BA33-DB853D9458DF}.Debug|.NET.ActiveCfg = Debug|.NET
+		{CBC074B0-81B6-46D1-BA33-DB853D9458DF}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

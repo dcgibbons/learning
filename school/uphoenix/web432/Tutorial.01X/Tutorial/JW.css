@@ -1,0 +1,30 @@
+TITLE {display:block; font-size:18pt; color:blue; font-weight:bold;
+       font-family: Arial, Helvetica, sans-serif; 
+       margin-top: 10pt; margin-left: 5pt}
+
+MESSAGE {display:block; width:500pt; color:blue; font-style:italic;
+         border-bottom:1pt solid black; padding-bottom:15pt;
+         margin-left: 10pt; margin-top: 10pt; margin-right: 10pt}
+
+CD {display:block; font-size:14pt;color:red; font-weight:bold;
+    font-family: Arial, Helvetica, Sans-serif;
+    margin-top: 20pt; margin-left:20pt}
+
+ARTIST {display:block; font-size: 12pt; color:black; font-style:italic;
+        font-family:Times New Roman, Times, Serif; 
+        margin-left: 12pt}
+
+PRICEUS, PRICEUK {color:black; font-size: 12pt;
+                  font-family: Times New Roman, Times, Serif;
+                  margin-left: 12pt}
+
+TRACK {display:list-item; font-size: 12pt; color:black; list-style-type: disc;
+       font-family: Times New Roman, Times, Serif;
+       margin-left: 25pt}
+
+
+
+
+
+
+

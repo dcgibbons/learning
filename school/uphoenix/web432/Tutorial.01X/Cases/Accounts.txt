@@ -1,0 +1,103 @@
+Grant Wu
+CS5355
+55 Hawking Street
+Delton, MN 89011
+(532) 555-9939
+gwu@brockton.com
+$60,000
+
+Cynthia Browne
+CS5108
+71 Circuit Ct.
+Wheaton, MN 89321
+(532) 555-3813
+cynthia@brownes.com
+$80,000
+
+Robert Olson
+CS5331
+5133 Oak Street
+Delton, MN  89011
+(532) 555-8981
+rolson@delisp.net
+$25,000
+
+Steve Bones
+CS5771
+900 Lawton Street
+Wheaton, MN 89211
+(533) 555-5434
+Sbone@mail.com
+$105,000
+
+Jim Wheatley
+CS5981
+Hawkes Lane
+Delton, MN 89211
+(542) 555-8828
+jim_wheatley@kyu.edu
+$83,000
+
+Cindy Kaufmann
+CS5308
+31 Alice Avenue
+Delton, MN 89011
+(532) 555-7212
+cka@ispnet.net
+$125,000
+
+Lee Hayes
+CS5250
+451 Unwin Ct.
+Jasper, MN 89381
+(534) 555-9082
+leehayes@clarion.net
+$118,000
+
+Jane Wilson
+CS5981
+87 Hilltop Drive
+Jasper, MN 89381
+(534) 555-7493
+jwilson@cls.net
+$95,000
+
+Allison Steubahl
+CS5510
+891 Lindon Lane
+Delton, MN 89011
+(532) 555-4313
+asteubahl@yulit.com
+$115,000
+
+Howard Li
+CS5821
+4312 East Oak Avenue
+Youngston, MN 89318
+(532) 555-3921
+how@li.com
+$50,000
+
+Uma Thurston
+CS5482
+25 Longton Lane
+Delton, MN 89011
+(531) 555-8730
+thurston@mail.com
+$100,000
+
+Ashley Wilkes
+CS5811
+321 Ashburn
+Jasper, MN 89831
+(532) 555-1181
+wilkes_alan@wuilt.edu
+$25,000
+
+Tom Thomas
+CS5314
+Rigel Avenue
+Drake, MN 89411
+(531) 555-8311
+tthomas@mail.com
+$71,000

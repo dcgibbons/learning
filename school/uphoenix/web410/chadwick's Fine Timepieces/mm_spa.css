@@ -1,0 +1,128 @@
+/* Global Styles */
+
+body {
+	margin:0px;
+	}
+	
+td {
+	font:11px Arial, Helvetica, sans-serif;
+	color:#FFFF00;
+	}
+	
+a {
+	color: #FF080E;
+	}
+	
+a:hover {
+	color: #FF9900;
+	}
+
+/* ID Styles */
+
+#navigation td {
+	border-bottom: 1px solid #FF9900
+	}
+
+#navigation a {
+	font:11px Arial, Helvetica, sans-serif;
+	color: #FF9900;
+	line-height:16px;
+	letter-spacing:.1em;
+	text-decoration: none;
+	display:block;
+	padding:8px 6px 8px 22px;
+	}
+	
+#navigation a:hover {
+	color:#FFFFCC;
+	font-weight:bold;
+	background: url("mm_bullet_yellow.gif") 10px 50% no-repeat;
+	}
+	
+#navheader {
+	font:24px georgia;
+	color: #1F2669;
+	letter-spacing:.4em;
+	padding:10px;
+	line-height:30px;
+	}
+	
+#logo 	{
+	font:14px Arial, Helvetica, sans-serif;
+	color: #FF9900;
+	letter-spacing:.5em;
+	line-height:30px;
+	}
+
+#tagline 	{	
+	font:11px Arial, Helvetica, sans-serif;
+	color: #FF9900;
+	letter-spacing:.2em;
+	line-height:14px;
+	}
+	
+#monthformat td {
+	 border-bottom: 1px solid #FFFFCC;
+	 }
+	 
+#dateformat {
+	font:11px Arial, Helvetica, sans-serif;
+	color: #FFFF00;
+	letter-spacing:.4em;
+	}
+	
+#dateformat a {
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #FFFF00;
+	letter-spacing:.1em;
+	text-decoration: none;
+	}
+	
+#dateformat a:hover {
+	color: #FFFFCC;
+	}
+
+/* Class Styles */
+	
+.bodyText {
+	font:11px Arial, Helvetica, sans-serif;
+	color:#FFFF00;
+	line-height:22px;
+	margin-top:0px;
+	letter-spacing:.1em;
+	}
+	
+.pageName{
+	font:18px Arial, Helvetica, sans-serif;
+	color: #FFFF00;
+	line-height:24px;
+	letter-spacing:.3em;
+	}
+	
+.columnHeader {
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #FF080E;
+	line-height:18px;
+	letter-spacing:.05em;
+	}
+	
+.subHeader {
+	font:bold 11px Arial, Helvetica, sans-serif;
+	color: #FF080E;
+	line-height:18px;
+	letter-spacing:.1em;
+	}
+
+.smallText {
+	font:10px Arial, Helvetica, sans-serif;
+	color:#333333;
+	}
+	
+.navText {
+	font:11px Georgia, Times New Roman, Times, serif;
+	color: #1F2669;
+	line-height:16px;
+	letter-spacing:.1em;
+	text-decoration: none;
+	}
+

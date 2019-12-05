@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+
+<Studies>
+
+  <Study SID="CCC-501-24" SGender="Female">
+     <Name>Treatment of Radiation Firbrosis</Name>
+     <Summary>This study is investigating whether two drugs, vitamin E(Alpha-tocopherol),
+              and Oxpentifylline, may help to heal body tissues damaged by radiotheraphy.
+     </Summary>
+     <PI>Richard Tunney</PI>
+     <Start_Date>1998-05-01</Start_Date>
+     <Stop_Date>2003-06-15</Stop_Date>
+     <Enrollment>24</Enrollment>
+     <Phase>3</Phase>
+     <Site>University Hospital</Site>
+  </Study>
+
+  <Study SID="CCC-510-43" SGender="Female">
+     <Name>Tamoxifen for Early Stage Breast Cancer</Name>
+     <Summary>This study is to discover whether taking tamoxifen for longer than five years
+              will reduce the risk of recurrence without additional side effects.
+     </Summary>
+     <PI>Alice Walters</PI>
+     <Start_Date>1999-12-01</Start_Date>
+     <Stop_Date>2009-11-30</Stop_Date>
+     <Enrollment>100</Enrollment>
+     <Phase>3</Phase>
+     <Site>University Hospital</Site>
+     <Site>St. Thomas Vianney Hospital</Site>
+     <Site>Ohio Cancer Clinic</Site>
+  </Study>
+
+  <Study SID="CCC-510-48" SGender="Females">
+     <Name>Taxoprexin for Advanced Breast Cancer</Name>
+     <Summary>This study seeks to dicover the effacy of of Taxoprexin in treating advanced
+              stage breast cancer, to determine the side effects of Taxoprexin, and to determine
+              how quickly the body gets rid of Taxoprexin.
+     </Summary>
+     <PI>Chandaskar Rao</PI>
+     <Start_Date>2002-04-15</Start_Date>
+     <Stop_Date>2003-04-15</Stop_Date>
+     <Enrollment>15</Enrollment>
+     <Phase>Two</Phase>
+     <Site>University Hospital</Site>
+   </Study>
+
+   <Study SID="CCC-425-08" SGender="Male">
+      <Name>CT Scanning in Early Stage Testicular Cancer</Name>
+      <Summary>This study tests whether giving CT scans more often will detect the recurrence
+               of testicular cancer earlier.
+      </Summary>
+      <PI>Dennis Lehman</PI>
+      <Start_Date>2002-11-15</Start_Date>
+      <Stop_Date>2007-11-14</Stop_Date>
+      <Enrollment>48</Enrollment>
+      <Phase>3</Phase>
+      <Site>University Hospital</Site>
+      <Site>Ohio Cancer Clinic</Site>
+   </Study>
+
+   <Study SID="CCC-805-88" SGender="All">
+      <Name>Chemotheraphy with Cisplatin and Irintecan in Advanced Pancreatic Cancer</Name>
+      <Summary>This study test whether giving patients of combination of chemotheraphy with
+               cisplatin and irinotecan will control the symptons of advanced pancreatic
+               cancer.
+      </Summary>
+      <PI>Michael Siudzinski</PI>
+      <Start_Date>2003-06-01</Start_Date>
+      <Stop_Date>2005-05-31</Stop_Date>
+      <Enrollment>12</Enrollment>
+      <Phase>2</Phase>
+      <Site>Unversity Hospital</Site>
+   </Study>
+
+   <Study SID="CCC-718-14" SGender="All">
+      <Name>Encrecolomab in Post-Surgical Colon Cancer</Name>
+      <PI>Linda Sanchez</PI>
+      <Start_Date>2003-01-15</Start_Date>
+      <Stop_Date>2008-12-31</Stop_Date>
+      <Enrollment>1000</Enrollment>
+      <Phase>3</Phase>
+      <Site>Univeristy Hospital</Site>
+      <Site>Ohio Cancer Clinic</Site>
+      <Site>St. Thomas Vianney Hospital</Site>
+      <Site>Midwest Cancer Center</Site>
+      <Site>Methodist Hospital</Site>
+   </Study>
+
+   <Study SID="CCC-330-21" SGender="Both">
+      <Name>Cisplatin in the Treatment of Mesothelioma</Name>
+      <Summary>This study examines the effacy of cisplatin in the treatment of
+               mesothelioma using a standard randomized clinical trial.
+      </Summary>
+      <PI>Karen Cho</PI>
+      <Start_Date>2003-04-01</Start_Date>
+      <Stop_Date>2008-03-31</Stop_Date>
+      <Enrollment>240</Enrollment>
+      <Phase>Three</Phase>
+      <Site>University Hospital</Site>
+      <Site>Ohio Cancer Clinic</Site>
+   </Study>
+</Studies>

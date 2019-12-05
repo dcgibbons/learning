@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+
+<League LName="Eastern Developmental League">
+   <Team>
+      <Team_Name>Tigers</Team_Name>
+      <City>Toledo</City>
+      <Logo Source="Tigers"/>
+      <Players>
+         <Player Position="Centers" PPG="21.2" RPG="11.1">Lionel Diggs</Player>
+         <Player Position="Forward" PPG="18.9" RPG="8.4">Andrew Case</Player>
+         <Player Position="Forward" PPG="14.4" RPG="5.0">Casey Lewis</Player>
+         <Player Position="Guard" PPG="15.4" RPG="3.1" Assists="9.4">Andrew Case</Player>
+         <Player Position="Guard" PPG="7.2" RPG="2.5" Assists="3.9">Ray Kee</Player>
+      </Players>
+   </Team>
+   <Team>
+      <Team_Name>Raiders</Team_Name>
+      <City>Central City</City>
+      <Logo Source="Raiders"/>
+      <Players>
+         <Player Position="Center" PPG="17.2" RPG="14.2">David Thesus</Player>
+         <Player Position="Forward" PPG="28.3" RPG="7.0">Troy Thompson</Player>
+         <Player Position="Forward" PPG="10.4" RPG="5.3">Gary Coles</Player>
+         <Player Position="Guard" PPG="19.2" RPG="5.2" Assists="4.4">Michael Burns</Player>
+         <Player Position="Guard" PPG="5.1" RPG="2.1" Assists="12.9">Patrick Dawson</Player>
+      </Players>
+   </Team>
+   <Team>
+      <Team_Name>Lightning</Team_Name>
+      <City>Philadelphia</City>
+      <Players>
+         <Player Position="Center" PPG="12.2" RPG="14.2">Tim White</Player>
+         <Player Position="Forward" PPG="21.7" RPG="7.8">Michael Keyes</Player>
+         <Player Position="Forward" PPG="8.4" RPG="9.4">Bobby Phillips</Player>
+         <Player Position="Guard" PPG="13.1" RPG="1.4" Assists="10.3">David Rice</Player>
+         <Player Position="Guard" PPG="10.2" RPG="4.1" Assists="8.4">Elroy Watson</Player>
+      </Players>
+   </Team>
+   <Team>
+      <Team_Name>Hoopsters</Team_Name>
+      <City>Hill County</City>
+      <Players>
+         <Player Position="Center" PPG="36.8" RPG="14.8">Tim Brubeck</Player>
+         <Player Position="Forward" PPG="13.9" RPG="7.2">Steve True</Player>
+         <Player Position="Forward" PPG="5.2" RPG="7.9">David Dannon</Player>
+         <Player Position="Guard" PPG="12.4" RPG="5.8" Assists="7.3">Kevin Cleveland</Player>
+         <Player Position="Guard" PPG="9.5" RPG="6.2" Assists="12.3">Doug Kaufman</Player>
+      </Players>
+   </Team>
+   <Team>
+      <Team_Name>Jaguars</Team_Name>
+      <City>Jersey City</City>
+      <Players>
+         <Player Position="Center" PPG="9.4" RPG="15.1">Scott Plank</Player>
+         <Player Position="Forward" PPG="24.1" RPG="8.1">Bill Avidman</Player>
+         <Player Position="Forward" PPG="10.2" RPG="8.7">Dan Smith</Player>
+         <Player Position="Guard" PPG="24.8" RPG="2.9" Assists="9.7">Brett Dickson</Player>
+         <Player Position="Guard" PPG="8.1" RPG="6.7" Assists="8.8">Paul Thompson</Player>
+      </Players>
+   </Team>
+   <Team>
+      <Team_Name>Storm</Team_Name>
+      <City>Rockaway</City>
+      <Logo Source="Storm"/>
+      <Players>
+         <Player Position="Center" PPG="21.4" RPG="14.8">Tom Jay</Player>
+         <Player Position="Forward" PPG="16.8" RPG="8.7">Alan Jackson</Player>
+         <Player Position="Forward" PPG="8.4" RPG="7.8">Alan Jones</Player>
+         <Player Position="Guard" PPG="19.2" RPG="1.8" Assists="14.3">Kevin Browne</Player>
+         <Player Position="Guard" PPG="14.8" RPG="5.1" Assists="7.2">Ian Larson</Player>
+         <Player Position="Center"></Player>
+      </Players>
+   </Team>
+</League>
