@@ -30,6 +30,7 @@ intcode_t read_intcode(const char* input_filename)
     if (!intcode) return NULL;
     intcode->max_memory_size = MAX_INTCODE_BUFFER;
     intcode->program_size = 0;
+    intcode->ip = 0;
     intcode->buffer = calloc(intcode->max_memory_size, sizeof(int));
     if (!intcode->buffer) {
         free(intcode);
@@ -57,16 +58,93 @@ intcode_t read_intcode(const char* input_filename)
         return NULL;
     }
 
+    fclose(fp);
+
     return intcode;
 }
 
-void run_intcode(intcode_t intcode, const int* input, int n, int* output)
+void free_intcode(intcode_t intcode)
 {
-    int ip = 0;
-    int inputp = 0;
+    free(intcode->buffer);
+    memset(intcode, 0xff, sizeof(*intcode));  // debugging safety
+    free(intcode);
+}
 
-    while (ip < intcode->program_size) {
-        int raw_opcode = intcode->buffer[ip++];
+void add(intcode_t intcode, int param1_mode, int param2_mode)
+{
+    int opa = intcode->buffer[intcode->ip++];
+    int opb = intcode->buffer[intcode->ip++];
+    int dest = intcode->buffer[intcode->ip++];
+    int r1 = (param1_mode ? opa : intcode->buffer[opa]);
+    int r2 = (param2_mode ? opb : intcode->buffer[opb]);
+    intcode->buffer[dest] = r1 + r2;
+}
+
+void mul(intcode_t intcode, int param1_mode, int param2_mode)
+{
+    int opa = intcode->buffer[intcode->ip++];
+    int opb = intcode->buffer[intcode->ip++];
+    int dest = intcode->buffer[intcode->ip++];
+    int r1 = (param1_mode ? opa : intcode->buffer[opa]);
+    int r2 = (param2_mode ? opb : intcode->buffer[opb]);
+    intcode->buffer[dest] = r1 * r2;
+}
+
+void jump_if_true(intcode_t intcode, int param1_mode, int param2_mode)
+{
+    int opa = intcode->buffer[intcode->ip++];
+    int opb = intcode->buffer[intcode->ip++];
+    int r1 = (param1_mode ? opa : intcode->buffer[opa]);
+    int r2 = (param2_mode ? opb : intcode->buffer[opb]);
+    if (r1 != 0) {
+        intcode->ip = r2;
+    }
+}
+
+void jump_if_false(intcode_t intcode, int param1_mode, int param2_mode)
+{
+    int opa = intcode->buffer[intcode->ip++];
+    int opb = intcode->buffer[intcode->ip++];
+    int r1 = (param1_mode ? opa : intcode->buffer[opa]);
+    int r2 = (param2_mode ? opb : intcode->buffer[opb]);
+    if (r1 == 0) {
+        intcode->ip = r2;
+    }
+}
+
+void less_than(intcode_t intcode, int param1_mode, int param2_mode)
+{
+    int opa = intcode->buffer[intcode->ip++];
+    int opb = intcode->buffer[intcode->ip++];
+    int dest = intcode->buffer[intcode->ip++];
+    int r1 = (param1_mode ? opa : intcode->buffer[opa]);
+    int r2 = (param2_mode ? opb : intcode->buffer[opb]);
+    if (r1 < r2) {
+        intcode->buffer[dest] = 1;
+    } else {
+        intcode->buffer[dest] = 0;
+    }
+}
+
+void equals(intcode_t intcode, int param1_mode, int param2_mode)
+{
+    int opa = intcode->buffer[intcode->ip++];
+    int opb = intcode->buffer[intcode->ip++];
+    int dest = intcode->buffer[intcode->ip++];
+    int r1 = (param1_mode ? opa : intcode->buffer[opa]);
+    int r2 = (param2_mode ? opb : intcode->buffer[opb]);
+    if (r1 == r2) {
+        intcode->buffer[dest] = 1;
+    } else {
+        intcode->buffer[dest] = 0;
+    }
+}
+
+bool run_intcode(intcode_t intcode, const int* input, int n, int* output)
+{
+    int inputp = 0;
+    while (intcode->ip < intcode->program_size) {
+        int raw_opcode = intcode->buffer[intcode->ip++];
         int opcode = raw_opcode % 100;
         int param1_mode = raw_opcode / 100 % 10;
         int param2_mode = raw_opcode / 1000 % 10;
@@ -74,97 +152,50 @@ void run_intcode(intcode_t intcode, const int* input, int n, int* output)
 
         switch (opcode) {
             case 1:  // add
-            {
-                int opa = intcode->buffer[ip++];
-                int opb = intcode->buffer[ip++];
-                int dest = intcode->buffer[ip++];
-                int r1 = (param1_mode ? opa : intcode->buffer[opa]);
-                int r2 = (param2_mode ? opb : intcode->buffer[opb]);
-                intcode->buffer[dest] = r1 + r2;
+                add(intcode, param1_mode, param2_mode);
                 break;
-            }
             case 2:  // multiplies
-            {
-                int opa = intcode->buffer[ip++];
-                int opb = intcode->buffer[ip++];
-                int dest = intcode->buffer[ip++];
-                int r1 = (param1_mode ? opa : intcode->buffer[opa]);
-                int r2 = (param2_mode ? opb : intcode->buffer[opb]);
-                intcode->buffer[dest] = r1 * r2;
+                mul(intcode, param1_mode, param2_mode);
                 break;
-            }
             case 3:  // input
             {
-                if (inputp == n) abort();
+                if (inputp == n) {
+                    fprintf(stderr, "insufficient input data, inputp=%d n=%d\n",
+                            inputp, n);
+                    abort();  // no input left
+                }
                 int val = input[inputp++];
-                int dest = intcode->buffer[ip++];
+                int dest = intcode->buffer[intcode->ip++];
                 intcode->buffer[dest] = val;
                 break;
             }
             case 4:  // output
             {
-                int dest = intcode->buffer[ip++];
+                int dest = intcode->buffer[intcode->ip++];
                 int value = (param1_mode ? dest : intcode->buffer[dest]);
                 *output = value;
-                break;
+                return false;
             }
             case 5: // jump-if-true
-            {
-                int opa = intcode->buffer[ip++];
-                int opb = intcode->buffer[ip++];
-                if ((param1_mode ? opa : intcode->buffer[opa])) {
-                    ip = (param2_mode ? opb : intcode->buffer[opb]);
-                }
+                jump_if_true(intcode, param1_mode, param2_mode);
                 break;
-            }
             case 6: // jump-if-false
-            {
-                int opa = intcode->buffer[ip++];
-                int opb = intcode->buffer[ip++];
-                if (!(param1_mode ? opa : intcode->buffer[opa])) {
-                    ip = (param2_mode ? opb : intcode->buffer[opb]);
-                }
+                jump_if_false(intcode, param1_mode, param2_mode);
                 break;
-            }
             case 7: // less than
-            {
-                int opa = intcode->buffer[ip++];
-                int opb = intcode->buffer[ip++];
-                int dest = intcode->buffer[ip++];
-                int r1 = (param1_mode ? opa : intcode->buffer[opa]);
-                int r2 = (param2_mode ? opb : intcode->buffer[opb]);
-                if (r1 < r2) {
-                    intcode->buffer[dest] = 1;
-                } else {
-                    intcode->buffer[dest] = 0;
-                }
+                less_than(intcode, param1_mode, param2_mode);
                 break;
-            }
             case 8: // equals
-            {
-                int opa = intcode->buffer[ip++];
-                int opb = intcode->buffer[ip++];
-                int dest = intcode->buffer[ip++];
-                int r1 = (param1_mode ? opa : intcode->buffer[opa]);
-                int r2 = (param2_mode ? opb : intcode->buffer[opb]);
-                if (r1 == r2) {
-                    intcode->buffer[dest] = 1;
-                } else {
-                    intcode->buffer[dest] = 0;
-                }
+                equals(intcode, param1_mode, param2_mode);
                 break;
-            }
             case 99:
-            {
-                //printf("HALT\n");
-                return;
-            }
+                return true;
             default:
-            {
-                puts("UNKNOWN INSTRUCTION ABORTING");
+                fprintf(stderr, "UNKNOWN INSTRUCTION ABORTING\n");
                 abort();
-            }
         }
     }
+
+    return true;  // out of instructions, same as halted?
 }
 
