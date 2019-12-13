@@ -110,7 +110,7 @@ static void run_intcode(int* intcode_data, size_t intcode_size)
         int opcode = raw_opcode % 100;
         int param1_mode = raw_opcode / 100 % 10;
         int param2_mode = raw_opcode / 1000 % 10;
-        int param3_mode = raw_opcode / 10000 % 10;
+        //int param3_mode = raw_opcode / 10000 % 10;
         switch (opcode) {
             case 1:  // add
             {
