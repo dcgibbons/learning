@@ -20,8 +20,8 @@
 #define AMPLIFIER_SIZE 5
 
 /* forward reference */
-static void permute(intcode_t intcode, int v[AMPLIFIER_SIZE],
-        int start, int end, int* best_output);
+static void permute(intcode_t intcode, long v[AMPLIFIER_SIZE],
+        int start, int end, long* best_output);
 
 int main(int argc, char* argv[])
 {
@@ -36,20 +36,20 @@ int main(int argc, char* argv[])
             perror("unable to read intcode");
             rc = errno;
         } else {
-            int best_output = -1;
-            int arr[] = {0,1,2,3,4};
+            long best_output = -1;
+            long arr[] = {0,1,2,3,4};
             permute(intcode, arr, 0, AMPLIFIER_SIZE, &best_output);
-            printf("best output:%d\n", best_output);
+            printf("best output:%ld\n", best_output);
         }
     }
     return rc;
 }
 
-static int run_permutation(intcode_t intcode, int input[5])
+static long run_permutation(intcode_t intcode, long input[5])
 {
-    int output = 0;
+    long  output = 0;
     for (int amplifier = 0; amplifier < 5; amplifier++) {
-        int amplifier_input[2];
+        long amplifier_input[2];
         amplifier_input[0] = input[amplifier];
         amplifier_input[1] = output;
 
@@ -69,15 +69,15 @@ static int run_permutation(intcode_t intcode, int input[5])
     return output;
 }
 
-static void swap(int* x, int* y)
+static void swap(long* x, long* y)
 {
     int tmp = *x;
     *x = *y;
     *y = tmp;
 }
 
-static void permute(intcode_t intcode, int v[AMPLIFIER_SIZE], 
-        int start, int end, int* best_output)
+static void permute(intcode_t intcode, long v[AMPLIFIER_SIZE], 
+        int start, int end, long* best_output)
 {
     if (start == end) {
         int trial_output = run_permutation(intcode, v);
@@ -88,6 +88,7 @@ static void permute(intcode_t intcode, int v[AMPLIFIER_SIZE],
         for (int i = start; i < end; i++) {
             swap(v + start, v + i);
             permute(intcode, v, start+1, end, best_output);
+            swap(v + start, v + i);
         }
     }
 }

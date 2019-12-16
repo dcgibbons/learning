@@ -21,8 +21,8 @@
 
 /* forward reference */
 static void permute(const char* input_filename,
-                    int v[NUM_AMPLIFIERS],
-                    int start, int end, int* best_output);
+                    long v[NUM_AMPLIFIERS],
+                    int start, int end, long* best_output);
 
 int main(int argc, char* argv[])
 {
@@ -31,22 +31,22 @@ int main(int argc, char* argv[])
         exit(EXIT_FAILURE);
     } else {
         const char* input_filename = argv[1];
-        int best_output = -1;
-        int arr[] = {5,6,7,8,9};
+        long best_output = -1;
+        long arr[] = {5,6,7,8,9};
         permute(input_filename, arr, 0, NUM_AMPLIFIERS, &best_output);
-        printf("best output:%d\n", best_output);
+        printf("best output:%ld\n", best_output);
     }
     return EXIT_SUCCESS;
 }
 
 static int run_permutation(intcode_t amplifiers[NUM_AMPLIFIERS],
-                           int input[NUM_AMPLIFIERS])
+                           long input[NUM_AMPLIFIERS])
 {
-    int output = 0;
+    long output = 0;
 
     // first pass!
     for (int amplifier = 0; amplifier < NUM_AMPLIFIERS; amplifier++) {
-        int amplifier_input[2];
+        long amplifier_input[2];
         amplifier_input[0] = input[amplifier];
         amplifier_input[1] = output;
         (void)run_intcode(amplifiers[amplifier], amplifier_input, 2, &output);
@@ -63,9 +63,9 @@ static int run_permutation(intcode_t amplifiers[NUM_AMPLIFIERS],
     return output;
 }
 
-static void swap(int* x, int* y)
+static void swap(long* x, long* y)
 {
-    int tmp = *x;
+    long tmp = *x;
     *x = *y;
     *y = tmp;
 }
@@ -94,8 +94,8 @@ static void shutdown_amplifiers(intcode_t amplifiers[NUM_AMPLIFIERS])
 }
 
 static void permute(const char* input_filename,
-                    int v[NUM_AMPLIFIERS],
-                    int start, int end, int* best_output)
+                    long v[NUM_AMPLIFIERS],
+                    int start, int end, long* best_output)
 {
     // base case - we are at the of a permutation, so check it!
     if (start == end) {
