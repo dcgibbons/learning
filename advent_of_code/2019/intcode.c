@@ -17,7 +17,7 @@
 
 #include "intcode.h"
 
-#define MAX_INTCODE_BUFFER      (1024 * 1024 * 1024)
+#define MAX_INTCODE_BUFFER      (1024 * 1024)
 
 intcode_t read_intcode(const char* input_filename)
 {
