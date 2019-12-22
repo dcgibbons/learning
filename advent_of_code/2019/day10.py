@@ -58,6 +58,7 @@ def find_max_visible_asteroids(map):
         # can see; keep track of the highest number so far
         if len(slopes) > best:
             best = len(slopes)
+            print("best asteroid is %r with %d asteroids visible" % (a, best))
 
     return best
 
