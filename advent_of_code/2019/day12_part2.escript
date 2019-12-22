@@ -1,4 +1,5 @@
 #!/usr/bin/env escript
+%%! -smp enable
 %
 % day12_part2.escript
 % Advent of Code 2019 - Day 12
@@ -14,6 +15,7 @@ main([Filename, Steps]) ->
     Moons = prepare_data(Filename),
 
     TimeStepFun = fun(Step, {IncomingMoons, PreviousStates}) ->
+        update_check(Step),
         UpdatedMoons = apply_velocity(apply_gravity(IncomingMoons)),
         case sets:is_element(UpdatedMoons, PreviousStates) of
             true ->
@@ -30,6 +32,10 @@ main([Filename, Steps]) ->
     {UpdatedMoons, _} = lists:foldl(TimeStepFun, {Moons, sets:new()}, TimeSteps),
     io:fwrite("Moons after simulation: ~p~n", [UpdatedMoons]),
     ok.
+
+update_check(Step) when Step > 0 andalso Step rem 100000 =:= 0 ->
+    io:fwrite("~p~n", [Step]);
+update_check(_) -> ok.
 
 %
 % apply gravity from all other moons to each moon
