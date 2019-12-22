@@ -2,6 +2,7 @@
 %
 % day12.escript
 % Advent of Code 2019 - Day 12
+% https://adventofcode.com/2019/day/12
 %
 % Chad Gibbons
 % December 22, 2019
