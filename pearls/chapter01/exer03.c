@@ -34,6 +34,10 @@ int main(void)
                 strerror(errno));
         exit(EXIT_FAILURE);
     }
+    else
+    {
+        printf("allocated %d bytes\n", MAX_VALUE / CHAR_BIT);
+    }
 
     char buffer[BUFSIZ];
     while (fgets(buffer, sizeof(buffer), stdin) != NULL)
