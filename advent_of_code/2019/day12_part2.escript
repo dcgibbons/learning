@@ -8,46 +8,56 @@
 % Chad Gibbons
 % December 22, 2019
 %
+% Solution Note: I totally had to give in and consult the reddit oracles for
+% advice on this one. The brute force approach (checked in as a previous version
+% of this source file) was easy but useless. This solution takes advantage of
+% that each X,Y,Z position can be independently computed and the cycle count for
+% each calculated. Then finding the least-common-multiplier for all 3 values
+% give you the total cycle count.
+%
 
 -mode(compile).
 
-main([Filename, Steps]) ->
+main([Filename]) ->
     Moons = prepare_data(Filename),
 
-    TimeStepFun = fun(Step, {IncomingMoons, PreviousStates}) ->
-        update_check(Step),
-        UpdatedMoons = apply_velocity(apply_gravity(IncomingMoons)),
-        case sets:is_element(UpdatedMoons, PreviousStates) of
-            true ->
-                io:fwrite("Previous State found after ~p steps: ~p~n",
-                          [Step, UpdatedMoons]),
-                halt(0);
-            false ->
-                ok
-        end,
-        {UpdatedMoons, sets:add_element(UpdatedMoons, PreviousStates)}
+    % Calculate total # of steps required for each X, Y, and Z axis
+    ApplyFun = fun(Pos) ->
+        apply_loop(Pos, 1, Moons, Moons)
     end,
+    [X, Y, Z] = Steps = lists:map(ApplyFun, lists:seq(1, 3)),  % X, Y, and Z...
+    io:fwrite("Steps: ~p~n", [Steps]),
 
-    TimeSteps = lists:seq(0, to_integer(Steps)),
-    {UpdatedMoons, _} = lists:foldl(TimeStepFun, {Moons, sets:new()}, TimeSteps),
-    io:fwrite("Moons after simulation: ~p~n", [UpdatedMoons]),
+    % Calculate the least common mulitple for all 3 values to get the total
+    % number of steps required
+    TotalSteps = lcm(X, Y, Z),
+    io:fwrite("Total Steps to return to original: ~p~n", [TotalSteps]),
     ok.
 
-update_check(Step) when Step > 0 andalso Step rem 100000 =:= 0 ->
-    io:fwrite("~p~n", [Step]);
-update_check(_) -> ok.
+%
+% apply gravity and velocity to all moons, but for one axis at a time - do this
+% in a loop until the moon position/velocity for that axis returns to its
+% original value, and then return the number of steps it took
+%
+apply_loop(PosNum, Step, OriginalMoons, CurrentMoons) ->
+    UpdatedMoons = apply_velocity(PosNum, apply_gravity(PosNum, CurrentMoons)),
+    case UpdatedMoons of
+        C when C == OriginalMoons -> Step;
+        _ -> apply_loop(PosNum, Step + 1, OriginalMoons, UpdatedMoons)
+    end.
 
 %
-% apply gravity from all other moons to each moon
+% apply ye olde gravity, but only for the specified axis
 %
-apply_gravity(Moons) ->
-
-    CompareFun = fun({{X1,Y1,Z1},_} = _OtherMoon,
-                     {{X0,Y0,Z0},{DX,DY,DZ}} = _ThisMoon) ->
-        DeltaX = compare_gravity(X0, X1),
-        DeltaY = compare_gravity(Y0, Y1),
-        DeltaZ = compare_gravity(Z0, Z1),
-        {{X0, Y0, Z0}, {DX + DeltaX, DY + DeltaY, DZ + DeltaZ}}
+apply_gravity(PosNum, Moons) ->
+    CompareFun = fun({OtherPos, _} = _OtherMoon,
+                     {ThisPos, ThisVelocity} = _ThisMoon) ->
+        Pos0 = element(PosNum, ThisPos),
+        Pos1 = element(PosNum, OtherPos),
+        Delta = compare_gravity(Pos0, Pos1),
+        {ThisPos, setelement(PosNum,
+                             ThisVelocity,
+                             element(PosNum, ThisVelocity) + Delta)}
     end,
 
     GravityFun = fun(Moon, UpdatedMoons) ->
@@ -70,11 +80,13 @@ compare_gravity(This, Other) ->
     end.
 
 %
-% apply velocity to each moon
+% apply velocity to each moon, but only for the specified axis
 %
-apply_velocity(Moons) ->
-    VelocityFun = fun({{X0, Y0, Z0}, {DX, DY, DZ} = Deltas} = _Moon) ->
-        {{X0 + DX, Y0 + DY, Z0 + DZ}, Deltas}
+apply_velocity(PosNum, Moons) ->
+    VelocityFun = fun({MoonPos, MoonVelocity} = _Moon) ->
+        Pos = element(PosNum, MoonPos),
+        Delta = element(PosNum, MoonVelocity),
+        {setelement(PosNum, MoonPos, Pos + Delta), MoonVelocity}
     end,
     lists:map(VelocityFun, Moons).
 
@@ -122,4 +134,12 @@ part([H1,H2,H3|T], Acc) -> part(T, [{H1,H2,H3}|Acc]).
 %
 to_integer(L) when is_list(L) -> list_to_integer(L);
 to_integer(B) when is_binary(B) -> list_to_integer(binary_to_list(B)).
+
+%
+% greatest common denominator and least common multiple helpers
+%
+gcd(A, 0) -> A;
+gcd(A, B) -> gcd(B, A rem B).
+lcm(A, B) -> abs(A * B div gcd(A, B)).
+lcm(A, B, C) -> lcm(A, lcm(B, C)).
 
