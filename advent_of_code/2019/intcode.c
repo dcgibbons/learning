@@ -32,6 +32,7 @@ intcode_t read_intcode(const char* input_filename)
     intcode->program_size = 0;
     intcode->ip = 0;
     intcode->relative_base = 0;
+    intcode->inputp = 0;
     intcode->buffer = calloc(intcode->max_memory_size, sizeof(long));
     if (!intcode->buffer) {
         free(intcode);
@@ -198,7 +199,6 @@ void equals(intcode_t intcode, int p1_mode, int p2_mode, int p3_mode)
 
 bool run_intcode(intcode_t intcode, const long* input, long n, long* output)
 {
-    long inputp = 0;
     while (intcode->ip < intcode->program_size) {
         long raw_opcode = intcode->buffer[intcode->ip++];
         long opcode = raw_opcode % 100;
@@ -215,12 +215,12 @@ bool run_intcode(intcode_t intcode, const long* input, long n, long* output)
                 break;
             case 3:  // input
             {
-                if (inputp == n) {
+                if (intcode->inputp == n) {
                     fprintf(stderr, "insufficient input data, inputp=%ld n=%ld\n",
-                            inputp, n);
+                            intcode->inputp, n);
                     abort();  // no input left
                 }
-                long val = input[inputp++];
+                long val = input[intcode->inputp++];
                 long dest = intcode->buffer[intcode->ip++];
                 switch (p1_mode) {
                     case 0:
