@@ -18,6 +18,7 @@ struct _intcode {
     long* buffer;
     long ip;
     long relative_base;
+    long inputp;
 };
 
 extern intcode_t read_intcode(const char* input_filename);
