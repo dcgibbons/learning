@@ -45,12 +45,12 @@ void queue_push(queue_t** queue, int priority, void* value)
     }
 }
 
-void queue_update_priority(queue_t** queue, int priority, void* value)
+void queue_update_priority(queue_t** queue, int priority, void* value, int (*compar)(const void*, const void*))
 {
     assert(queue != NULL);
     queue_t* prev = NULL;
     queue_t* curr = *queue;
-    while (curr != NULL && curr->value != value) {
+    while (curr != NULL && compar(curr->value, value) != 0) {
         prev = curr;
         curr = curr->next;
     }

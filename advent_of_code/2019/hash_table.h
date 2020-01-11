@@ -17,10 +17,12 @@ typedef struct hashnode {
 
 typedef struct hashtable {
   size_t table_size;
+  int (*compar)(const void*, const void*);
   hashnode_t** table;
 } hashtable_t;
 
 extern hashtable_t* hash_init(size_t size);
+extern hashtable_t* hash_init2(size_t size, int (*compar)(const void *, const void*));
 extern hashnode_t* hash_lookup(hashtable_t* hashtable, void* key);
 extern void hash_insert(hashtable_t* hashtable, void* key, void* value);
 extern void hash_free(hashtable_t** hashtable);
