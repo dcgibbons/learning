@@ -8,3 +8,6 @@ priv
 *.class
 *.DS_Store
 a.out
+__pycache__
+.idea
+*.pyc
