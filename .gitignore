@@ -12,3 +12,5 @@ __pycache__
 .idea
 *.pyc
 target
+.DS_Store
+*~
