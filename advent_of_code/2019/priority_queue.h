@@ -16,7 +16,7 @@ typedef struct queue_node {
 } queue_t;
 
 extern void queue_push(queue_t** queue, int priority, void* value);
-extern void queue_update_priority(queue_t** queue, int priority, void* value);
+extern void queue_update_priority(queue_t** queue, int priority, void* value, int (*compar)(const void*, const void *));
 extern void* queue_pop(queue_t** queue);
 extern void queue_free(queue_t** queue);
 
