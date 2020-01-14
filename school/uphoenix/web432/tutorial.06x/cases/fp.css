@@ -1,9 +1,0 @@
-body {background-color:rgb(255,255,192)}
-#Page_Data {float:left; width:290; padding:5px}
-h1#Title {font-family:Arial, Helvetica, sans-serif;font-size:24pt;font-weight:bold;
-              color:blue}
-h2#Subtitle {font-family:Arial, Helvetica, sans-serif; font-style:italic; color:blue;
-                 border-bottom: solid 1 brown}
-p {color:brown}
-table.etable {background-color:white; font-size: 10pt}
-th.etable {font-family: sans-serif; background-color:blue; color: rgb(255, 255, 192)}
